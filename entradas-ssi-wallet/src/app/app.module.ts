@@ -30,8 +30,8 @@ import { ConfirmAccess } from '../pages/confirm-access/confirm-access';
 import { HttpClientModule } from "@angular/common/http"
 import { TokenService } from '../services/token-service';
 import { ToastService } from '../services/toast-service';
-import {RegisterPrivacyConditionsPage} from "../pages/register/register-hub/register-privacy-conditions/register-privacy-conditions";
 import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hub/register-privacy-conditions/register-privacy-conditions.module";
+import {SideBarComponent} from "../components/side-bar/side-bar";
 @NgModule({
     declarations: [
         MyApp,
@@ -45,6 +45,7 @@ import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hu
         ConfirmLogin,
         WalkthroughPage,
         ConfirmAccess,
+        SideBarComponent
     ],
     imports: [
         BrowserModule,

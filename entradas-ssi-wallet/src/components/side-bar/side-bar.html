@@ -1,0 +1,37 @@
+<ion-menu [content]="content">
+    <ion-header>
+    </ion-header>
+    <ion-content>
+        <ion-list class="login-menu">
+            <button ion-item (click)="openPage('changeUser')">
+                <div item-start><ion-icon name="qr-scanner"></ion-icon></div>Inicio
+            </button>
+            <button ion-item (click)="openPage('infoPage')">
+                <div item-start><ion-icon name="cloud-upload"></ion-icon></div>Accesos no registrados
+            </button>
+            <button ion-item (click)="openPage('reportProblem')">
+                <div item-start> <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon></div>Información de interés
+            </button>
+            <button ion-item (click)="openPage('legal')">
+                <div item-start><ion-icon name="bonfire"></ion-icon></div>Reportar un problema
+            </button>
+            <button ion-item (click)="openPage('legal')">
+                <div item-start><ion-icon name="paper"></ion-icon></div>Aviso legal
+            </button>
+            <button ion-item (click)="openPage('legal')">
+                <div item-start><ion-icon name="exit"></ion-icon></div>Salir
+            </button>
+        </ion-list>
+        <label class="version-info">Versión AlastriaID 1.1</label>
+    </ion-content>
+</ion-menu>
+
+<!--<ion-header #content>-->
+<!--    <ion-navbar>-->
+<div>
+        <button #content ion-button menuToggle clear icon-start>
+           <ion-icon name="menu"></ion-icon>
+        </button>
+</div>
+<!--    </ion-navbar>-->
+<!--</ion-header>-->
