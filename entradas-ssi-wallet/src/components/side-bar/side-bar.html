@@ -3,10 +3,10 @@
     </ion-header>
     <ion-content>
         <ion-list class="login-menu">
-            <button ion-item (click)="openPage('changeUser')">
+            <button ion-item (click)="openPage('qr-response')">
                 <div item-start><ion-icon name="qr-scanner"></ion-icon></div>Inicio
             </button>
-            <button ion-item (click)="openPage('infoPage')">
+            <button ion-item (click)="openPage('pendingToRegister')">
                 <div item-start><ion-icon name="cloud-upload"></ion-icon></div>Accesos no registrados
             </button>
             <button ion-item (click)="openPage('reportProblem')">
@@ -27,11 +27,12 @@
 </ion-menu>
 
 <!--<ion-header #content>-->
-<!--    <ion-navbar>-->
-<div>
+<ion-navbar>
         <button #content ion-button menuToggle clear icon-start>
-           <ion-icon name="menu"></ion-icon>
+            <ion-icon name="menu"></ion-icon>
         </button>
-</div>
-<!--    </ion-navbar>-->
+    <div class="img-in2">
+            <img src="src/assets/images/logo-in2/logo_in2.png">
+    </div>
+</ion-navbar>
 <!--</ion-header>-->

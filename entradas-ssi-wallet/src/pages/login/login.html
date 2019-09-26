@@ -3,7 +3,7 @@
     <div>
         <h2 class="logobwc" style="color: #000;">Solicitud Presentación</h2>
         <div class="qr">
-            <ion-icon name="qr-scanner"></ion-icon>
+            <ion-img [src]='jwtqr'></ion-img>
         </div>
         <!-- nivel de la solicitud -->
         <div class="contendor-info-user">
@@ -23,12 +23,12 @@
         </div>
         <div class="scanner">
             <div class="switch-multi">
-                <h6>Escaneo múltiple</h6>
+                <h6 class="title-scanner">Escaneo múltiple</h6>
                 <ion-toggle></ion-toggle>
             </div>
             <div class="btn-scanner">
-                <h6>Escanear</h6>
-                <ion-icon name="arrow-forward"></ion-icon>
+                <h6 class="title-scanner">Escanear</h6>
+                <ion-icon name="arrow-forward" (click)="opneQr()"></ion-icon>
             </div>
         </div>
     </div>

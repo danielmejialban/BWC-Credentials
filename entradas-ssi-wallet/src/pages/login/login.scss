@@ -24,6 +24,7 @@
 .scanner{
     display: flex;
     justify-content: space-evenly;
+    padding-top: 50px;
 }
 
 .toggle-md{
@@ -42,4 +43,30 @@
 .switch-multi{
     display: flex;
     justify-items: baseline;
+}
+h6 title-scanner{
+    margin-top: 13px;
+    padding-top: 15px;
+}
+
+ion-img {
+    display: inline-block;
+    min-height: 100% !important;
+    background: #eee;
+    contain: inherit !important;
+}
+
+h6{
+    margin: 5px;
+}
+
+h6:first-child {
+    margin-top: 0.9rem;
+}
+
+
+.img-in2{
+    width: 175px;
+    text-align: center;
+    justify-content: center;
 }

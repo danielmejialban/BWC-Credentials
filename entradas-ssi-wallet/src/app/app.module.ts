@@ -32,11 +32,17 @@ import { TokenService } from '../services/token-service';
 import { ToastService } from '../services/toast-service';
 import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hub/register-privacy-conditions/register-privacy-conditions.module";
 import {SideBarComponent} from "../components/side-bar/side-bar";
+import {QrReaderPage} from "../pages/qr-reader/qr-reader";
+import {QRScanner} from "@ionic-native/qr-scanner/ngx";
+import {PendingToRegistryPage} from "../pages/pending-to-registry/pending-to-registry";
+import {TestService} from "../services/test.service";
+import {QrResponsePage} from "../pages/qr-response/qr-response";
+import {QrResponsePageModule} from "../pages/qr-response/qr-response.module";
 @NgModule({
     declarations: [
         MyApp,
-        HomePage,
         Login,
+        HomePage,
         InfoPage,
         ProfilePage,
         DetailProfilePage,
@@ -45,15 +51,14 @@ import {SideBarComponent} from "../components/side-bar/side-bar";
         ConfirmLogin,
         WalkthroughPage,
         ConfirmAccess,
-        SideBarComponent
+        SideBarComponent,
+        QrReaderPage,
+        PendingToRegistryPage,
+        QrResponsePage
     ],
     imports: [
         BrowserModule,
-        IonicModule.forRoot(MyApp, {
-            backButtonText: 'Tu AlastriaID',
-            backButtonIcon: 'ios-arrow-back'
-        }
-        ),
+        IonicModule.forRoot(MyApp),
         RegisterFormModule,
         RegisterPrivacyConditionsPageModule,
         TabsPageModule,
@@ -64,7 +69,8 @@ import {SideBarComponent} from "../components/side-bar/side-bar";
         UserInfoHeaderModule,
         IdentityDataListModule,
         UserInfoHeaderModule,
-        HttpClientModule
+        HttpClientModule,
+
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -79,7 +85,12 @@ import {SideBarComponent} from "../components/side-bar/side-bar";
         ConfirmAccess,
         WalkthroughPage,
         ConfirmLogin,
-
+        QrReaderPage,
+        PendingToRegistryPage,
+        QrResponsePage
+    ],
+    exports: [
+        SideBarComponent
     ],
     providers: [
         StatusBar,
@@ -91,9 +102,13 @@ import {SideBarComponent} from "../components/side-bar/side-bar";
         SessionSecuredStorageService,
         IdentitySecuredStorageService,
         Activities,
-        { provide: ErrorHandler, useClass: IonicErrorHandler },
+        {provide: ErrorHandler, useClass: IonicErrorHandler},
         ToastService,
-        TokenService
+        TokenService,
+        QRScanner,
+        TestService
+
     ]
+
 })
 export class AppModule { }

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {NavController} from "ionic-angular";
+import {PendingToRegistryPage} from "../../pages/pending-to-registry/pending-to-registry";
+import {QrResponsePage} from "../../pages/qr-response/qr-response";
 
 /**
  * Generated class for the SideBarComponent component.
@@ -14,14 +17,21 @@ export class SideBarComponent {
 
   text: string;
 
-  constructor() {
+  constructor(private navCtrl: NavController) {
     console.log('Hello SideBarComponent Component');
     this.text = 'Hello World';
   }
 
 
     openPage(page: string){
-      console.log(page);
+      switch (page) {
+          case 'pendingToRegister':
+              this.navCtrl.push(PendingToRegistryPage);
+              break;
+          case 'qr-response' :
+              this.navCtrl.push(QrResponsePage);
+              break;
+      }
     }
 
 }

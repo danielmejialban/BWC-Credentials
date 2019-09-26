@@ -124,6 +124,13 @@
   resolved "https://registry.yarnpkg.com/@ionic-native/google-analytics/-/google-analytics-4.4.2.tgz#5c2021cc08c412e4c088c4657a7e125396f3d526"
   integrity sha512-xNXdGcYhM3supUevAqDmiqWSQ3WOhNboPOUWu+N+afXdPQyf4lbBhhTTGUdLnBexW90+JqoO+5bjrR4NwFhTHQ==
 
+"@ionic-native/qr-scanner@^5.14.0":
+  version "5.14.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/qr-scanner/-/qr-scanner-5.14.0.tgz#bcf39f0a1b07a11c49f0ce08e7978cf7aeccbe18"
+  integrity sha512-nEnHKBkDfsPPiolXGsgLoHynYQJegquK1ECwFEPZpT+1NvK7PZmPZhv6+e+en8qiBZfJaUqrYKiZS3P302a4Kg==
+  dependencies:
+    "@types/cordova" latest
+
 "@ionic-native/secure-storage@4.10.1":
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/@ionic-native/secure-storage/-/secure-storage-4.10.1.tgz#fbac4c282b70345ffe1a4363afd9218f944a862e"
@@ -180,6 +187,11 @@
     "@types/localforage" "0.0.30"
     localforage "~1.4.2"
     localforage-cordovasqlitedriver "~1.5.0"
+
+"@types/cordova@latest":
+  version "0.0.34"
+  resolved "https://registry.yarnpkg.com/@types/cordova/-/cordova-0.0.34.tgz#ea7addf74ecec3d7629827a0c39e2c9addc73d04"
+  integrity sha1-6nrd907Ow9dimCegw54smt3HPQQ=
 
 "@types/jsonwebtoken@8.3.2":
   version "8.3.2"
@@ -1196,6 +1208,14 @@ cordova-plugin-ionic-webview@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-2.2.0.tgz#190270e6598bd4a9d23bb93ce65e7d4dffceb31c"
   integrity sha512-mNTJaIRsz83Vntk2d3jrPCnlqEPQsfOJW6U2AzS7WV1T15Jj/STdXI/Uv1vIyvPVd9h1OLF+yu64ZsmQH2VRMQ==
+
+cordova-plugin-qrscanner@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-qrscanner/-/cordova-plugin-qrscanner-3.0.1.tgz#34af2ede5ce857ee9b4d75936e2916fead238545"
+  integrity sha512-xrwOP3nD+VmRSiV0w7chZ5PLw2YwpI9vtLdeoGNYLLzmmjjYbyIof+x9vOEOgjtwrg9S61rukmOZhQAmkzaosA==
+  dependencies:
+    qrcode-reader "^1.0.4"
+    webrtc-adapter "^3.1.4"
 
 cordova-plugin-secure-storage@2.6.8:
   version "2.6.8"
@@ -3920,6 +3940,11 @@ q@^1.4.1:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qrcode-reader@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/qrcode-reader/-/qrcode-reader-1.0.4.tgz#95d9bb9e8130800361a96cb5a43124ad1d9e06b8"
+  integrity sha512-rRjALGNh9zVqvweg1j5OKIQKNsw3bLC+7qwlnead5K/9cb1cEIAGkwikt/09U0K+2IDWGD9CC6SP7tHAjUeqvQ==
+
 qrcode@^0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/qrcode/-/qrcode-0.8.2.tgz#4a4b4dd74ae43b7b05d4cc598badc1c03837189c"
@@ -4333,6 +4358,11 @@ scss-tokenizer@^0.2.3:
   dependencies:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
+
+sdp@^1.5.0:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/sdp/-/sdp-1.5.4.tgz#8e038f6ddb14bd765ae1f4b5216e12094511e0d0"
+  integrity sha1-jgOPbdsUvXZa4fS1IW4SCUUR4NA=
 
 "semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.3.0, semver@^5.4.1, semver@^5.6.0:
   version "5.7.0"
@@ -5277,6 +5307,13 @@ webpack@3.12.0:
     watchpack "^1.4.0"
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
+
+webrtc-adapter@^3.1.4:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-3.4.3.tgz#b636062eee9a6ef158acd0d8501b678434b56f16"
+  integrity sha1-tjYGLu6abvFYrNDYUBtnhDS1bxY=
+  dependencies:
+    sdp "^1.5.0"
 
 websocket-driver@>=0.5.1:
   version "0.7.0"
