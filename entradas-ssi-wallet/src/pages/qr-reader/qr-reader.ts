@@ -5,6 +5,7 @@ import {BarcodeScanner} from "@ionic-native/barcode-scanner";
 import {Login} from "../login/login";
 import {User} from "../../models/User";
 import {QrResponsePage} from "../qr-response/qr-response";
+import {TestService} from "../../services/test.service";
 
 /**
  * Generated class for the QrReaderPage page.
@@ -23,10 +24,10 @@ export class QrReaderPage {
     user: User = null;
     elementType : 'url' | 'canvas' | 'img' = 'url';
 
-
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private barcode: BarcodeScanner) {
+              private barcode: BarcodeScanner,
+              private testService: TestService) {
   }
 
   ionViewDidLoad() {
@@ -34,6 +35,7 @@ export class QrReaderPage {
   }
 
   qrScannerCam() {
+      console.log("ENTRA");
       this.barcode.scan().then(barcode =>{
           console.log("Ok escanneando",barcode);
           this.user = JSON.parse(barcode.text);
@@ -44,6 +46,7 @@ export class QrReaderPage {
   }
 
   goBack(){
+      this.testService.getAlastriaID();
       this.navCtrl.pop();
   }
 }

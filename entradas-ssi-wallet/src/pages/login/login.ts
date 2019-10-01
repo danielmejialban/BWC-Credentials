@@ -6,6 +6,7 @@ import { SessionSecuredStorageService } from '../../services/securedStorage.serv
 import { HomePage } from '../home/home';
 import {RegisterPrivacyConditionsPage} from "../register/register-hub/register-privacy-conditions/register-privacy-conditions";
 import {QrReaderPage} from "../qr-reader/qr-reader";
+import {TestService} from "../../services/test.service";
 
 @IonicPage()
 @Component({
@@ -25,8 +26,8 @@ export class Login {
         public barcodeScanner: BarcodeScanner,
         public navCtrl: NavController,
         public modalCtrl: ModalController,
-        public sessionSecuredStorageService: SessionSecuredStorageService
-    ) {}
+        public sessionSecuredStorageService: SessionSecuredStorageService,
+        private testService: TestService) {}
 
 
     openPage(page: string) {
@@ -49,8 +50,8 @@ export class Login {
     opneQr(){
         this.navCtrl.push(QrReaderPage);
         console.log("Ok!");
+        this.testService.getUID();
     }
-
 }
 
 @Component({
