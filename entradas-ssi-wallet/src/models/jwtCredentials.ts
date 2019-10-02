@@ -1,11 +1,11 @@
 export class HeaderJwtCredential{
     alg: "ES256";
     typ:"JWT";
-    kid:"did:ala:quor:redt:MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAPVZYa+LSjtENLP9F7kEIddeUDgB1BU2GCemh6g3caqs3R/t2N0R9oFoATvR/w3o/08XQw4i180zM6eZ24veEQcCAwEAAQ==#keys-1";
+    kid: string;
 }
 
 export class PayLoadJwtCredential{
-    iss: "did:alastria:quorum:testnet1:MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAPVZYa+LSjtENLP9F7kEIddeUDgB1BU2GCemh6g3caqs3R/t2N0R9oFoATvR/w3o/08XQw4i180zM6eZ24veEQcCAwEAAQ==";
+    iss: string;
     iat: 1525465044;
     exp: 1530735444;
     pr: PresentationRequest;

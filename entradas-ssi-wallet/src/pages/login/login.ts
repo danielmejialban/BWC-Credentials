@@ -18,16 +18,42 @@ export class Login {
     @Input() data: any;
     @Input() events: any;
 
-    jwtqr:string = "assets/images/jwtQr.PNG";
+    // jwtqr:string = "assets/images/jwtQr.PNG";
     user: string;
     pass: string;
+    pk: 123;
+    jwt:any;
 
     constructor(
         public barcodeScanner: BarcodeScanner,
         public navCtrl: NavController,
         public modalCtrl: ModalController,
         public sessionSecuredStorageService: SessionSecuredStorageService,
-        private testService: TestService) {}
+        private testService: TestService) {
+        this.jwt = {
+            "iss": "did:alastria:quorum:testnet1:"+this.pk,
+            "iat": 1525465044,
+            "exp": 1530735444,
+            "pr": {
+                "@context": [
+                    "https://www.w3.org/2018/credentials/v1",
+                    "JWT"
+                ],
+                "type": ["VerifiablePresentationRequest", "AlastriaVPRTicket"],
+                "procUrl": "https://www.direccion_evento.com/alastria/businessprocess/0001",
+                "procHash": "H398sjHd...kldjUYn475n",
+                "data": [
+                    {
+                        "@context": "JWT",
+                        "levelOfAssurance": "Low",
+                        "required": true,
+                        "field_name": "ticketID",
+                    }
+                ],
+            }
+        };
+        console.log("Jwt",this.jwt);
+    }
 
 
     openPage(page: string) {
@@ -37,7 +63,6 @@ export class Login {
 
     navegateTo(text: string) {
         let modal = this.modalCtrl.create(ContructionsPage);
-
         modal.present();
         console.log('Navigating to page: ' + text);
     }

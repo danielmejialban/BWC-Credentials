@@ -3,7 +3,11 @@
     <div>
         <h2 class="logobwc" style="color: #000;">Solicitud Presentación</h2>
         <div class="qr">
-            <ion-img [src]='jwtqr'></ion-img>
+<!--            <ion-img [src]='jwtqr'></ion-img>-->
+            <ngx-qrcode [qrc-value]="jwt | json"
+                        qrc-class="aclass"
+                        qrc-errorCorrectionLevel="L">
+            </ngx-qrcode>
         </div>
         <!-- nivel de la solicitud -->
         <div class="contendor-info-user">
