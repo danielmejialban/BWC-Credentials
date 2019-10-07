@@ -37,7 +37,7 @@ export class Login {
         public sessionSecuredStorageService: SessionSecuredStorageService,
         private testService: TestService) {
         this.jwtPayload = {
-            "iss": "did:alastria:quorum:testnet1:"+"asdasd",
+            "iss": "did:alastria:quorum:testnet1:"+"MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKWYCoGtSiFSUeekSLkIeohUoxoMUTAng==",
             "iat": 1525465044,
             "exp": 1530735444,
             "pr": {
@@ -69,8 +69,6 @@ export class Login {
         "oUQDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKW\n" +
         "YCoGtSiFSUeekSLkIeohUoxoMUTAng==\n" +
         "-----END EC PRIVATE KEY-----",{header: this.headerJwt,algorithm:"ES256"});
-        console.log("PORFIN",token);
-
     }
 
     openPage(page: string) {
