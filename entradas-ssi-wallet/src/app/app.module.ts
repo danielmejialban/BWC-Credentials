@@ -38,6 +38,9 @@ import {PendingToRegistryPage} from "../pages/pending-to-registry/pending-to-reg
 import {TestService} from "../services/test.service";
 import {QrResponsePage} from "../pages/qr-response/qr-response";
 import {QrResponsePageModule} from "../pages/qr-response/qr-response.module";
+import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
+
+
 @NgModule({
     declarations: [
         MyApp,
@@ -54,7 +57,8 @@ import {QrResponsePageModule} from "../pages/qr-response/qr-response.module";
         SideBarComponent,
         QrReaderPage,
         PendingToRegistryPage,
-        QrResponsePage
+        QrResponsePage,
+        QrResponseFailPage
     ],
     imports: [
         BrowserModule,
@@ -87,7 +91,8 @@ import {QrResponsePageModule} from "../pages/qr-response/qr-response.module";
         ConfirmLogin,
         QrReaderPage,
         PendingToRegistryPage,
-        QrResponsePage
+        QrResponsePage,
+        QrResponseFailPage
     ],
     exports: [
         SideBarComponent

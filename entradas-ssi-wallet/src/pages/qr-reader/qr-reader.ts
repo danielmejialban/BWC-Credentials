@@ -7,6 +7,8 @@ import {User} from "../../models/User";
 import {QrResponsePage} from "../qr-response/qr-response";
 import {TestService} from "../../services/test.service";
 import {Base64} from "js-base64";
+import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
+
 
 /**
  * Generated class for the QrReaderPage page.
@@ -24,6 +26,7 @@ import {Base64} from "js-base64";
 export class QrReaderPage {
     user: User = null;
     elementType: 'url' | 'canvas' | 'img' = 'url';
+    decode64: string;
 
     constructor(public navCtrl: NavController,
                 public navParams: NavParams,
@@ -54,6 +57,13 @@ export class QrReaderPage {
                 let jwt = require("jsonwebtoken");
                 let token = jwt.decode(barcodeData.text);
                 this.searchJSON(token);
+                let  ticketId = this.decode64;
+                console.log(ticketId);
+                if(ticketId != null && !undefined){
+                    this.navCtrl.push(QrResponsePage, {wantedRq: this.searchJSON(token)});
+                }else{
+                    this.navCtrl.push(QrResponseFailPage);
+                }
             }
         }).catch(err => {
             console.log('Error', err);
@@ -64,14 +74,13 @@ export class QrReaderPage {
         for (let k in data) {
             if (typeof data[k] == "object" && data[k] !== null) {
                 if (k == 'verifiableCredential') {
-                    let decode64 = Base64.decode(data[k]);
-                    this.navCtrl.push(QrResponsePage, {wantedRq: decode64});
+                    this.decode64 = Base64.decode(data[k]);
+                    console.log("----searchJson---",this.decode64);
+                    return true;
                 }
                 else{
                     this.searchJSON(data[k]);
                 }
-            } else {
-
             }
         }
     }
