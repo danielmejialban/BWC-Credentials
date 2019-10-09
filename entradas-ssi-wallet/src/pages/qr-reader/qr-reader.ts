@@ -38,17 +38,6 @@ export class QrReaderPage {
         console.log('ionViewDidLoad QrReaderPage');
     }
 
-    // qrScannerCam() {
-    //     console.log("ENTRA");
-    //     this.barcode.scan().then(barcode =>{
-    //         console.log("Ok escanneando",barcode);
-    //         this.user = JSON.parse(barcode.text);
-    //         this.navCtrl.push(QrResponsePage,{user:this.user})
-    //     }).catch(err =>{
-    //         console.log("Nope");
-    //     })
-    // }
-
     qrScannerCam() {
         this.barcode.scan().then(barcodeData => {
             if (!barcodeData) {
@@ -58,11 +47,10 @@ export class QrReaderPage {
                 let token = jwt.decode(barcodeData.text);
                 this.searchJSON(token);
                 let  ticketId = this.decode64;
-                console.log(ticketId);
                 if(ticketId != null && !undefined){
-                    this.navCtrl.push(QrResponsePage, {wantedRq: this.searchJSON(token)});
+                    this.navCtrl.push(QrResponsePage, {ticketId: ticketId});
                 }else{
-                    this.navCtrl.push(QrResponseFailPage);
+                    this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId});
                 }
             }
         }).catch(err => {
@@ -75,7 +63,6 @@ export class QrReaderPage {
             if (typeof data[k] == "object" && data[k] !== null) {
                 if (k == 'verifiableCredential') {
                     this.decode64 = Base64.decode(data[k]);
-                    console.log("----searchJson---",this.decode64);
                     return true;
                 }
                 else{

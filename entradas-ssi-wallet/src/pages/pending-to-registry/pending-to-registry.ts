@@ -16,13 +16,16 @@ import {TestService} from "../../services/test.service";
 })
 export class PendingToRegistryPage {
 
+    _tickets: string[] = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private testService : TestService) {
+      let tickets = localStorage.getItem('TicketsID')
+      this._tickets.push(tickets);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PendingToRegistryPage');
-    // this.testService.getUID();
   }
 
 }

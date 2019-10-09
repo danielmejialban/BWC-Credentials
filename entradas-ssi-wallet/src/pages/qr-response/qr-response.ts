@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, List, NavController, NavParams} from 'ionic-angular';
 import {User} from "../../models/User";
 
 /**
@@ -17,14 +17,24 @@ import {User} from "../../models/User";
 })
 export class QrResponsePage {
 
-    user:User;
+    wanted:string;
+    ticketsId = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-      this.user = navParams.get('user');
+     this.saveParamsInLocalStorage();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QrResponsePage');
+  }
+
+
+  saveParamsInLocalStorage(){
+      this.wanted= this.navParams.get('ticketId');
+      console.log(this.wanted);
+      this.ticketsId.push(this.wanted);
+      console.log("List",this.ticketsId);
+      localStorage.setItem("TicketsID",JSON.stringify(this.ticketsId));
   }
 
 }
