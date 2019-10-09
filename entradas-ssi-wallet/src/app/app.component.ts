@@ -12,13 +12,18 @@ export class MyApp {
     constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, app: App) {
         console.log("[Debug] App enter");
         platform.ready().then(() => {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            if (platform.is('android')) {
-                statusBar.backgroundColorByHexString('#325b8e');
-            }
-            splashScreen.hide();
+            // // Okay, so the platform is ready and our plugins are available.
+            // // Here you can do any higher level native things you might need.
+            // this.hideSplashScreen();
         });
     }
+    //
+    // hideSplashScreen() {
+    //     if (Splashscreen) {
+    //         setTimeout(() => {
+    //             Splashscreen.hide();
+    //         }, 100);
+    //     }
+
 }
 

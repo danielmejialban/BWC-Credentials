@@ -6,7 +6,6 @@ import {NgxQRCodeModule} from "ngx-qrcode2";
 
 @NgModule({
     declarations: [
-        Login,
     ],
     imports: [
         IonicPageModule.forChild(Login),

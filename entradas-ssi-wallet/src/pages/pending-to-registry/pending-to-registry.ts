@@ -20,12 +20,13 @@ export class PendingToRegistryPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private testService : TestService) {
-      let tickets = localStorage.getItem('TicketsID')
-      this._tickets.push(tickets);
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PendingToRegistryPage');
+      let tickets = localStorage.getItem('TicketsID')
+      this._tickets.push(tickets);
   }
 
 }
