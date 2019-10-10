@@ -7,7 +7,7 @@
     text-align: center;
 }
 .user{
-    display: inline-flex;
+    display: flow-root
 }
 
 .contendor-info-user{
@@ -43,6 +43,7 @@
 .switch-multi{
     display: flex;
     justify-items: baseline;
+    align-items: center;
 }
 h6 title-scanner{
     margin-top: 13px;
@@ -85,4 +86,41 @@ h6:first-child {
 }
 .img-button-icon{
     height: 1em;
+}
+
+.scanner{
+    padding:0;
+}
+
+.toggle-md {
+    position: relative;
+    width: 36px;
+    height: 14px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    contain: strict;
+    margin-top: 0.8rem;
+}
+
+.toggle-md .toggle-icon {
+    height: 14px;
+}
+
+.button-md {
+    border-radius: 10px;
+    background-color: #6ca966ff;
+}
+
+.toggle-md.toggle-checked .toggle-icon {
+    background-color: #6ca966ff;
+}
+
+.button-md:hover:not(.disable-hover) {
+    background-color: #6ca966ff !important;
+}
+
+
+img {
+    max-width: 60%;
+    border: 0;
 }

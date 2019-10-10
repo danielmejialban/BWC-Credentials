@@ -1,4 +1,4 @@
-<ion-menu [content]="content" type="overlay">
+<ion-menu persistent="true" [content]="content" type="overlay">
     <ion-header>
         <button>
             <ion-icon name="menu"></ion-icon>
@@ -29,7 +29,7 @@
     </ion-content>
 </ion-menu>
 
-<ion-navbar class="nav-bar-custom">
+<ion-navbar [hideBackButton]="true"  class="nav-bar-custom">
     <div class="button-container">
         <ion-title>
             <img  class="img-header" src="assets/images/hdpi/Header-background.png"/>

@@ -12,7 +12,6 @@ import {NgxQRCodeModule} from "ngx-qrcode2";
         NgxQRCodeModule,
     ],
     exports: [
-        Login
     ],
     entryComponents:[
         Camera

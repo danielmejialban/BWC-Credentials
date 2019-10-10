@@ -6,33 +6,39 @@
                 <!--            <ion-img [src]='jwtqr'></ion-img>-->
                 <ngx-qrcode [qrc-value]="jwtPayload | json"
                             qrc-class="aclass"
-                            qrc-errorCorrectionLevel="L">
+                            qrc-errorCorrectionLevel="L"
+                            [qrc-version]="18">
                 </ngx-qrcode>
             </div>
+            <hr style="color:#a19dae">
             <!-- nivel de la solicitud -->
             <div class="contendor-info-user">
                 <div class="user">
-                    <ion-icon name="arrow-up"></ion-icon>
-                    <h6>Bajo</h6>
+                 <h4 style="color:#a19dae">NIVEL</h4>
+                    <h6> <ion-icon name="arrow-up"></ion-icon>Básico</h6>
                 </div>
                 <div class="info-person">
-                    <ion-icon name="person"></ion-icon>
+                    <h4 style="color:#a19dae">DATOS</h4>
                     <h6>Nombre</h6>
                     <h6>Apellidos</h6>
                     <h6>TicketId</h6>
                 </div>
             </div>
+            <hr style="color:#a19dae">
             <div class="txt">
                 <p>Muestre el código QR al usuario para que proceda a su escaneo.</p>
             </div>
+            <hr style="color:#a19dae">
             <div class="scanner">
                 <div class="switch-multi">
-                    <h6 class="title-scanner">Escaneo múltiple</h6>
+                    <ion-label>Multi Scanner</ion-label>
                     <ion-toggle></ion-toggle>
                 </div>
                 <div class="btn-scanner">
-                    <h6 class="title-scanner">Escanear</h6>
-                    <ion-icon name="arrow-forward" (click)="opneQr()"></ion-icon>
+                        <button ion-button color="success" (click)="opneQr()">
+                            Escanear
+                            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+                        </button>
                 </div>
             </div>
         </div>
