@@ -19,6 +19,8 @@ export class Login {
     @Input() data: any;
     @Input() events: any;
 
+
+
     // jwtqr:string = "assets/images/jwtQr.PNG";
     user: string;
     pass: string;

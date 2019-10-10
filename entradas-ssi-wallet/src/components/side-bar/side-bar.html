@@ -29,13 +29,15 @@
     </ion-content>
 </ion-menu>
 
-<!--<ion-header #content>-->
-<ion-navbar>
-        <button #content ion-button menuToggle clear icon-start>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-    <div class="img-in2">
-            <img src="assets/images/logo-in2/logo_in2.png">
+<ion-navbar class="nav-bar-custom">
+    <div class="button-container">
+        <ion-title>
+            <img  class="img-header" src="assets/images/hdpi/Header-background.png"/>
+            <img  class="img-header-logos" src="assets/images/hdpi/Header-logos.png"/>
+        </ion-title>
     </div>
+    <button class="btn-side-bar" #content ion-button menuToggle clear icon-start>
+<!--        <ion-icon src="assets/images/hdpi/Header-iconW.png"></ion-icon>-->
+        <img clas="img-button-icon" src="assets/images/hdpi/Header-iconW.png"/>
+    </button>
 </ion-navbar>
-<!--</ion-header>-->

@@ -1,39 +1,39 @@
-<side-bar></side-bar>
-<ion-content>
-    <div>
-        <h2 class="logobwc" style="color: #000;">Solicitud Presentación</h2>
-        <div class="qr">
-<!--            <ion-img [src]='jwtqr'></ion-img>-->
-            <ngx-qrcode [qrc-value]="jwtPayload | json"
-                        qrc-class="aclass"
-                        qrc-errorCorrectionLevel="L">
-            </ngx-qrcode>
-        </div>
-        <!-- nivel de la solicitud -->
-        <div class="contendor-info-user">
-            <div class="user">
-                <ion-icon name="arrow-up"></ion-icon>
-                <h6>Bajo</h6>
+<ion-content class="no-scroll">
+        <side-bar></side-bar>
+        <div style="margin: 16px">
+            <h2 class="logobwc" style="color: #000;">Solicitud Presentación</h2>
+            <div class="qr">
+                <!--            <ion-img [src]='jwtqr'></ion-img>-->
+                <ngx-qrcode [qrc-value]="jwtPayload | json"
+                            qrc-class="aclass"
+                            qrc-errorCorrectionLevel="L">
+                </ngx-qrcode>
             </div>
-            <div class="info-person">
-                <ion-icon name="person"></ion-icon>
-                <h6>Nombre</h6>
-                <h6>Apellidos</h6>
-                <h6>TicketId</h6>
+            <!-- nivel de la solicitud -->
+            <div class="contendor-info-user">
+                <div class="user">
+                    <ion-icon name="arrow-up"></ion-icon>
+                    <h6>Bajo</h6>
+                </div>
+                <div class="info-person">
+                    <ion-icon name="person"></ion-icon>
+                    <h6>Nombre</h6>
+                    <h6>Apellidos</h6>
+                    <h6>TicketId</h6>
+                </div>
+            </div>
+            <div class="txt">
+                <p>Muestre el código QR al usuario para que proceda a su escaneo.</p>
+            </div>
+            <div class="scanner">
+                <div class="switch-multi">
+                    <h6 class="title-scanner">Escaneo múltiple</h6>
+                    <ion-toggle></ion-toggle>
+                </div>
+                <div class="btn-scanner">
+                    <h6 class="title-scanner">Escanear</h6>
+                    <ion-icon name="arrow-forward" (click)="opneQr()"></ion-icon>
+                </div>
             </div>
         </div>
-        <div class="txt">
-            <p>Muestre el código QR al usuario para que proceda a su escaneo.</p>
-        </div>
-        <div class="scanner">
-            <div class="switch-multi">
-                <h6 class="title-scanner">Escaneo múltiple</h6>
-                <ion-toggle></ion-toggle>
-            </div>
-            <div class="btn-scanner">
-                <h6 class="title-scanner">Escanear</h6>
-                <ion-icon name="arrow-forward" (click)="opneQr()"></ion-icon>
-            </div>
-        </div>
-    </div>
 </ion-content>
