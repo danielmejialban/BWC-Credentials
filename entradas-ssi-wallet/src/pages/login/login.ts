@@ -7,7 +7,9 @@ import { HomePage } from '../home/home';
 import {RegisterPrivacyConditionsPage} from "../register/register-hub/register-privacy-conditions/register-privacy-conditions";
 import {QrReaderPage} from "../qr-reader/qr-reader";
 import {TestService} from "../../services/test.service";
-import * as fs from "fs";
+import {QrResponsePage} from "../qr-response/qr-response";
+import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
+import {Base64} from "js-base64";
 
 @IonicPage()
 @Component({
@@ -18,9 +20,8 @@ import * as fs from "fs";
 export class Login {
     @Input() data: any;
     @Input() events: any;
-
-
-
+    elementType: 'url' | 'canvas' | 'img' = 'url';
+    decode64: string;
     // jwtqr:string = "assets/images/jwtQr.PNG";
     user: string;
     pass: string;
@@ -37,7 +38,8 @@ export class Login {
         public navCtrl: NavController,
         public modalCtrl: ModalController,
         public sessionSecuredStorageService: SessionSecuredStorageService,
-        private testService: TestService) {
+        private testService: TestService,
+        private barcode: BarcodeScanner) {
         this.jwtPayload = {
             "iss": "did:alastria:quorum:testnet1:"+"MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKWYCoGtSiFSUeekSLkIeohUoxoMUTAng==",
             "iat": 1525465044,
@@ -89,12 +91,48 @@ export class Login {
         console.log("Ok");
     }
 
-    opneQr(){
-        this.navCtrl.push(QrReaderPage);
-        console.log("Ok!");
-        this.testService.getUID();
+    // opneQr(){
+    //     this.navCtrl.push(QrReaderPage);
+    //     console.log("Ok!");
+    //     this.testService.getUID();
+    // }
+
+    qrScannerCam(){
+        this.barcode.scan().then(barcodeData => {
+            if (!barcodeData) {
+                alert('Error: Contacte con el service provider.')
+            } else {
+                let jwt = require("jsonwebtoken");
+                let token = jwt.decode(barcodeData.text);
+                this.searchJSON(token);
+                let  ticketId = this.decode64;
+                if(ticketId != null && !undefined){
+                    this.navCtrl.push(QrResponsePage, {ticketId: ticketId});
+                }else{
+                    this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId});
+                }
+            }
+        }).catch(err => {
+            console.log('Error', err);
+        });
+    }
+
+    searchJSON(data: any) {
+        for (let k in data) {
+            if (typeof data[k] == "object" && data[k] !== null) {
+                if (k == 'verifiableCredential') {
+                    this.decode64 = Base64.decode(data[k]);
+                    return true;
+                }
+                else{
+                    this.searchJSON(data[k]);
+                }
+            }
+        }
     }
 }
+
+
 
 @Component({
     selector: 'info',

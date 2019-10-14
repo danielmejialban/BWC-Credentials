@@ -36,9 +36,10 @@ export class QrReaderPage {
 
     ionViewDidLoad() {
         console.log('ionViewDidLoad QrReaderPage');
+        this.qrScannerCam();
     }
 
-    qrScannerCam() {
+    qrScannerCam(){
         this.barcode.scan().then(barcodeData => {
             if (!barcodeData) {
                 alert('Error: Contacte con el service provider.')
