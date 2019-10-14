@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {IonicPage, List, NavController, NavParams} from 'ionic-angular';
 import {User} from "../../models/User";
+import {Login} from "../login/login";
 
 /**
  * Generated class for the QrResponsePage page.
@@ -21,7 +22,7 @@ export class QrResponsePage {
     ticketsId = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-     this.saveParamsInLocalStorage();
+     // this.saveParamsInLocalStorage();
   }
 
   ionViewDidLoad() {
@@ -35,6 +36,14 @@ export class QrResponsePage {
       this.ticketsId.push(this.wanted);
       console.log("List",this.ticketsId);
       localStorage.setItem("TicketsID",JSON.stringify(this.ticketsId));
+
   }
+
+    goScanner(){
+        this.saveParamsInLocalStorage();
+        this.navCtrl.popToRoot();
+    }
+
+
 
 }

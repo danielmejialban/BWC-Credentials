@@ -1,12 +1,12 @@
 <ion-content scrollDownOnLoad="false">
     <side-bar></side-bar>
-    <ion-card>
+    <ion-card class="custom-card">
         <div class="general">
             <div class="accept">
                 <h2 class="tittle">Rechazado</h2>
             </div>
             <div class="accept">
-                <img  src="src/assets/images/hdpi/img-KO.png">
+                <img  src="assets/images/hdpi/img-KO.png">
             </div>
             <div class="data">
                 <h2  style="color: #bdbbd1ff; font-family: sans-serif; padding-bottom: 5px">DATOS</h2>
@@ -33,6 +33,6 @@
     </ion-card>
     <!-- Butoton back-->
     <div class="accept">
-        <button ion-button color="danger">Volver</button>
+        <button ion-button color="danger" (click)="goScanner()">Volver</button>
     </div>
 </ion-content>

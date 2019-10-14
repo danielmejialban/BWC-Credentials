@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NavController} from "ionic-angular";
 import {PendingToRegistryPage} from "../../pages/pending-to-registry/pending-to-registry";
 import {QrResponsePage} from "../../pages/qr-response/qr-response";
+import {Login} from "../../pages/login/login";
 
 /**
  * Generated class for the SideBarComponent component.
@@ -31,6 +32,8 @@ export class SideBarComponent {
           case 'qr-response' :
               this.navCtrl.push(QrResponsePage);
               break;
+          case 'login':
+              this.navCtrl.push(Login);
       }
     }
 

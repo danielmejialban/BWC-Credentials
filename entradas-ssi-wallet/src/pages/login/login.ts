@@ -31,6 +31,7 @@ export class Login {
         typ: "JWT",
         alg: "ES256"
     };
+    multiScanner:boolean = false;
 
 
     constructor(
@@ -130,6 +131,17 @@ export class Login {
             }
         }
     }
+
+    // activeMultiScanner(isMultiScanner: boolean, ticketId:any){
+    //     if (isMultiScanner){
+    //         this.navCtrl.push(QrResponsePage,{ticketId:ticketId});
+    //         setInterval( () =>{
+    //             this.navCtrl.push(QrReaderPage);
+    //         })
+    //     }else{
+    //         this.navCtrl.push(Login);
+    //     }
+    // }
 }
 
 

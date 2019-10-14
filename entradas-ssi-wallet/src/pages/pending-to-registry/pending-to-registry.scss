@@ -1,39 +1,56 @@
-.sync{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 15px;
-}
+page-pending-to-registry {
 
-.card-info{
-    display: flex;
-    padding-top: 5px;
-    justify-content: space-around;
-}
+    .card-md {
+        height: 100%;
+        border-radius: 12px;
+        width: inherit;
+        margin: 0 !important;
+    }
 
-ion-card {
-    display: block;
-    overflow: hidden;
-    height: 80px;
-}
+    .sync {
+        display: block;
+        text-align: left;
+        margin-left: 30px;
+    }
 
-.state{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 20px;
-}
-.green{
-    color: green;
-}
+    .card-info{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
 
-.red{
-    color: red;
-}
-.card-md{
-    margin-bottom: 20px !important;
-}
+    .level{
+        display: flex;
+        justify-content: space-between;
+    }
 
-.card-md h3, .card-md h4, .card-md h5, .card-md h6 {
-    margin: 2px 0;
-    font-size: 1.4rem;
-    font-weight: normal;
+    ion-card img {
+        display: block;
+        width: 50%;
+        height: 50%;
+        margin-top: 3px;
+    }
+
+    .state{
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        margin-bottom: 12px;
+    }
+
+    .card-md h3{
+        font-size: 20px !important;
+        font-family: unset !important;
+        font-weight: bold !important;
+        color: #3486baff !important;
+    }
+
+    .card md h5{
+        font-size: 15px;
+        color: #aab3b3 !important;
+        font-weight: bold;
+    }
 }

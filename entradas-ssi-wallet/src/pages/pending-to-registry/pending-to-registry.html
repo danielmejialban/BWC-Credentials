@@ -1,42 +1,48 @@
 <ion-content>
-<side-bar></side-bar>
+    <side-bar></side-bar>
     <div class="sync">
-        <h6>Pendientes de registrar</h6>
-        <button color="primary">Sincronizar</button>
+        <h2 style="font-weight: bold">Pendientes de registrar</h2>
+        <button ion-button small style="background-color:#bdbbd1ff">
+            Sincronizar
+            <ion-icon name="arrow-forward"></ion-icon>
+        </button>
     </div>
+    <!--- ACEPTADO -->
     <ion-card-content>
         <ion-card *ngIf="_tickets.length > 0">
             <div class="card-info">
-            <h2>Entradas sala VIP</h2>
-                <!-- Se tendrá que crear una varibale según el nivel en el ts. -->
-                <ion-icon name="arrow-up">Media</ion-icon>
+                <h3 class="title-card-info">Entradas sala VIP</h3>
+                <div class="level">
+                    <img src="assets/images/hdpi/credencial-B.png">
+                    <h2>Medio</h2>
+                </div>
             </div>
             <div class="state">
-                <h5 style="color: green !important;">Aceptado</h5>
-                <h5>Presentados el: 10/10/2019</h5>
+                <div style="display: flex;">
+                    <img src="assets/images/hdpi/ico-check.png">
+                    <h5 style="color: green !important; margin-top: auto; margin-left: 5px">Aceptado</h5>
+                </div>
+                <h5>PRESENTADA EL: <strong>10/10/2019</strong></h5>
             </div>
         </ion-card>
-<!--        <ion-card>-->
-<!--            <div class="card-info">-->
-<!--                <h2>Entradas sala VIP</h2>-->
-<!--                &lt;!&ndash; Se tendrá que crear una varibale según el nivel en el ts. &ndash;&gt;-->
-<!--                <ion-icon name="arrow-up">Media</ion-icon>-->
-<!--            </div>-->
-<!--            <div class="state">-->
-<!--                <h5 style="color: red !important;">Rechazado</h5>-->
-<!--                <h5>Presentados el: 21/09/2019</h5>-->
-<!--            </div>-->
-<!--        </ion-card>-->
-<!--        <ion-card>-->
-<!--            <div class="card-info">-->
-<!--                <h2>Entradas sala VIP</h2>-->
-<!--                &lt;!&ndash; Se tendrá que crear una varibale según el nivel en el ts. &ndash;&gt;-->
-<!--                <ion-icon name="arrow-up">Media</ion-icon>-->
-<!--            </div>-->
-<!--            <div class="state">-->
-<!--                <h5 style="color: green !important;">Aceptado</h5>-->
-<!--                <h5>Presentados el: 30/08/2019</h5>-->
-<!--            </div>-->
-<!--        </ion-card>-->
+    </ion-card-content>
+    <!-- RECHAZADO -->
+    <ion-card-content>
+        <ion-card *ngIf="_tickets.length > 0">
+            <div class="card-info">
+                <h3 class="title-card-info">Entradas sala VIP</h3>
+                <div class="level">
+                    <img src="assets/images/hdpi/credencial-B.png">
+                    <h2>Medio</h2>
+                </div>
+            </div>
+            <div class="state">
+                <div style="display: flex;">
+                    <img src="assets/images/hdpi/ico-close-red.png">
+                    <h5 style="color: red !important; margin-top: auto; margin-left: 5px">Rechazado</h5>
+                </div>
+                <h5>PRESENTADA EL: <strong>10/10/2019</strong></h5>
+            </div>
+        </ion-card>
     </ion-card-content>
 </ion-content>

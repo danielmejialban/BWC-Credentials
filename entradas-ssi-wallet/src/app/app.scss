@@ -25,3 +25,29 @@
 .top50 {
     margin-top: 50px !important;
 }
+
+.black_menu {
+    background: rgb(36, 43, 66);
+}
+
+.black_menu > button {
+    background: rgb(36, 43, 66);
+    color: white;
+}
+
+.black_menu > .scroll-content {
+    background: rgb(36, 43, 66);
+    button {
+        background: rgb(36, 43, 66);
+        color: white;
+    }
+    button:hover {
+        background: rgb(54, 65, 99);
+    }
+    button:last-child{
+        border-bottom: 1px solid #dedede;
+    }
+}
+.white_color {
+    color: white;
+}

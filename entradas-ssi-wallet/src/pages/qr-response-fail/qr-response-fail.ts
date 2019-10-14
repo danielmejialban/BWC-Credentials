@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Login} from "../login/login";
+import {errorHandler} from "@angular/platform-browser/src/browser";
 
 /**
  * Generated class for the QrResponseFailPage page.
@@ -20,6 +22,10 @@ export class QrResponseFailPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QrResponseFailPage');
+  }
+
+  goScanner(){
+      this.navCtrl.popToRoot();
   }
 
 }

@@ -1,126 +1,131 @@
-.logobwc{
-    text-align: center;
-}
 
-.qr{
-    display: block;
-    text-align: center;
-}
-.user{
-    display: flow-root
-}
+    .logobwc {
+        text-align: center;
+    }
 
-.contendor-info-user{
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 10px;
-}
+    .qr {
+        display: block;
+        text-align: center;
+    }
 
-.txt{
-    display: block;
-    text-align: center;
-}
+    .user {
+        display: flow-root
+    }
 
-.scanner{
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 50px;
-}
+    .contendor-info-user {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 10px;
+    }
 
-.toggle-md{
-    position: relative;
-    width: 36px;
-    height: 14px;
-    box-sizing: content-box;
-    contain: strict;
-    padding-left: 5px;
-}
+    .txt {
+        display: block;
+        text-align: center;
+    }
 
-.btn-scanner{
-    display: flex;
-}
+    .scanner {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 50px;
+    }
 
-.switch-multi{
-    display: flex;
-    justify-items: baseline;
-    align-items: center;
-}
-h6 title-scanner{
-    margin-top: 13px;
-    padding-top: 15px;
-}
+    .toggle-md {
+        position: relative;
+        width: 36px;
+        height: 14px;
+        box-sizing: content-box;
+        contain: strict;
+        padding-left: 5px;
+    }
 
-ion-img {
-    display: inline-block;
-    min-height: 100% !important;
-    background: #eee;
-    contain: inherit !important;
-}
+    .btn-scanner {
+        display: flex;
+    }
 
-h6{
-    margin: 5px;
-}
+    .switch-multi {
+        display: flex;
+        justify-items: baseline;
+        align-items: center;
+    }
 
-h6:first-child {
-    margin-top: 0.9rem;
-}
+    h6 title-scanner {
+        margin-top: 13px;
+        padding-top: 15px;
+    }
 
-.img-in2{
-    width: 175px;
-    text-align: center;
-    justify-content: center;
-}
+    ion-img {
+        display: inline-block;
+        min-height: 100% !important;
+        background: #eee;
+        contain: inherit !important;
+    }
 
-.scroll-content{
-    padding: 0 !important;
-    background-color: #f0f0f5ff;
-}
+    h6 {
+        margin: 5px;
+    }
 
-.toolbar-md {
-    padding: 0 !important;
-    min-height: 0 !important;
-}
+    h6:first-child {
+        margin-top: 0.9rem;
+    }
 
-.toolbar-title-md {
-    padding: 0 !important;
-}
-.img-button-icon{
-    height: 1em;
-}
+    .img-in2 {
+        width: 175px;
+        text-align: center;
+        justify-content: center;
+    }
 
-.scanner{
-    padding:0;
-}
+    .scroll-content {
+        padding: 0 !important;
+        background-color: #f0f0f5ff;
+    }
 
-.toggle-md {
-    position: relative;
-    width: 36px;
-    height: 14px;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    contain: strict;
-    margin-top: 0.8rem;
-}
+    .toolbar-md {
+        padding: 0 !important;
+        min-height: 0 !important;
+    }
 
-.toggle-md .toggle-icon {
-    height: 14px;
-}
+    .toolbar-title-md {
+        padding: 0 !important;
+    }
 
-.button-md {
-    border-radius: 10px;
-    background-color: #6ca966ff;
-}
+    .img-button-icon {
+        height: 1em;
+    }
 
-.toggle-md.toggle-checked .toggle-icon {
-    background-color: #6ca966ff;
-}
+    .scanner {
+        padding: 0;
+    }
 
-.button-md:hover:not(.disable-hover) {
-    background-color: #6ca966ff !important;
-}
+    .toggle-md {
+        position: relative;
+        width: 36px;
+        height: 14px;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        contain: strict;
+        margin-top: 0.8rem;
+    }
+
+    .toggle-md .toggle-icon {
+        height: 14px;
+    }
+
+    .button-md {
+        border-radius: 10px;
+        background-color: #6ca966ff;
+    }
+
+    .toggle-md.toggle-checked .toggle-icon {
+        background-color: #6ca966ff;
+    }
+
+    .button-md:hover:not(.disable-hover) {
+        background-color: #6ca966ff !important;
+    }
 
 
-img {
-    max-width: 60%;
-    border: 0;
-}
+    img {
+        max-width: 60%;
+        border: 0;
+    }
+
