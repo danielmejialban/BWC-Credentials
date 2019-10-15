@@ -39,6 +39,7 @@ import {TestService} from "../services/test.service";
 import {QrResponsePage} from "../pages/qr-response/qr-response";
 import {QrResponsePageModule} from "../pages/qr-response/qr-response.module";
 import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
+import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-service-provider";
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
         QrReaderPage,
         PendingToRegistryPage,
         QrResponsePage,
-        QrResponseFailPage
+        QrResponseFailPage,
+        ModalServiceProviderPage
     ],
     imports: [
         BrowserModule,
@@ -73,8 +75,7 @@ import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
         UserInfoHeaderModule,
         IdentityDataListModule,
         UserInfoHeaderModule,
-        HttpClientModule,
-
+        HttpClientModule
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -92,7 +93,8 @@ import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
         QrReaderPage,
         PendingToRegistryPage,
         QrResponsePage,
-        QrResponseFailPage
+        QrResponseFailPage,
+        ModalServiceProviderPage
     ],
     exports: [
         SideBarComponent
@@ -112,8 +114,6 @@ import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
         TokenService,
         QRScanner,
         TestService,
-
     ]
-
 })
 export class AppModule { }

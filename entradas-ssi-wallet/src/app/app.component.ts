@@ -15,8 +15,15 @@ export class MyApp {
     rootPage: any = HomePage;
     @ViewChild(Nav) nav: Nav;
 
-    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, app: App) {
+    constructor(platform: Platform,
+                statusBar: StatusBar,
+                splashScreen: SplashScreen,
+                app: App) {
         console.log("[Debug] App enter");
+        platform.registerBackButtonAction(() =>{
+            console.log("Saliendo...");
+            platform.exitApp();
+        },100)
     }
 
     openPage(page: string){
@@ -28,7 +35,7 @@ export class MyApp {
                 this.nav.push(QrResponsePage);
                 break;
             case 'login':
-                this.nav.push(Login);
+                this.nav.popToRoot();
                 break;
         }
     }

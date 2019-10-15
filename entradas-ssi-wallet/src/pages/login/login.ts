@@ -10,6 +10,12 @@ import {TestService} from "../../services/test.service";
 import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
 import {Base64} from "js-base64";
+import {User} from "../../models/User";
+import {clearScreenDown} from "readline";
+import {PayLoadJwtCredential} from "../../models/jwtCredentials";
+import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
+
+
 
 @IonicPage()
 @Component({
@@ -22,16 +28,16 @@ export class Login {
     @Input() events: any;
     elementType: 'url' | 'canvas' | 'img' = 'url';
     decode64: string;
-    // jwtqr:string = "assets/images/jwtQr.PNG";
-    user: string;
     pass: string;
-    jwtPayload:any;
+    jwtPayload: any;
     headerJwt = {
         kid: "did:ala:quor:redt:345#keys-1",
         typ: "JWT",
         alg: "ES256"
     };
-    multiScanner:boolean = false;
+    multiScanner: boolean = false;
+    user: User;
+    serviceProvider: string;
 
 
     constructor(
@@ -40,9 +46,9 @@ export class Login {
         public modalCtrl: ModalController,
         public sessionSecuredStorageService: SessionSecuredStorageService,
         private testService: TestService,
-        private barcode: BarcodeScanner) {
+        private barcode: BarcodeScanner,) {
         this.jwtPayload = {
-            "iss": "did:alastria:quorum:testnet1:"+"MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKWYCoGtSiFSUeekSLkIeohUoxoMUTAng==",
+            "iss": "did:alastria:quorum:testnet1:" + "MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKWYCoGtSiFSUeekSLkIeohUoxoMUTAng==",
             "iat": 1525465044,
             "exp": 1530735444,
             "pr": {
@@ -58,7 +64,9 @@ export class Login {
                         "@context": "JWT",
                         "levelOfAssurance": "Low",
                         "required": true,
-                        "field_name": "ticketID",
+                        "field_ticket": "ticketID",
+                        // "field_name":"name",
+                        // "field_email":"email"
                     }
                 ],
             }
@@ -66,18 +74,17 @@ export class Login {
         this.generateToken();
     }
 
-    generateToken(){
-        // let privatekey = fs.readFileSync("src/PEM/privateKyudo.pem");
+    generateToken() {
         let jwt = require("jsonwebtoken");
-        let token = jwt.sign(this.jwtPayload,"-----BEGIN EC PRIVATE KEY-----\n" +
-        "MHQCAQEEILI8IeZxN1DQskSvfl1rDnWp/9horl1xAwumWlk0fYejoAcGBSuBBAAK\n" +
-        "oUQDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKW\n" +
-        "YCoGtSiFSUeekSLkIeohUoxoMUTAng==\n" +
-        "-----END EC PRIVATE KEY-----",{header: this.headerJwt,algorithm:"ES256"});
+        let token = jwt.sign(this.jwtPayload, "-----BEGIN EC PRIVATE KEY-----\n" +
+            "MHQCAQEEILI8IeZxN1DQskSvfl1rDnWp/9horl1xAwumWlk0fYejoAcGBSuBBAAK\n" +
+            "oUQDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKW\n" +
+            "YCoGtSiFSUeekSLkIeohUoxoMUTAng==\n" +
+            "-----END EC PRIVATE KEY-----", {header: this.headerJwt, algorithm: "ES256"});
     }
 
     openPage(page: string) {
-        let modal = this.modalCtrl.create(InfoPage, { title: page });
+        let modal = this.modalCtrl.create(InfoPage, {title: page});
         modal.present();
     }
 
@@ -87,9 +94,18 @@ export class Login {
         console.log('Navigating to page: ' + text);
     }
 
-    goToRegister(){
-        this.navCtrl.push(RegisterPrivacyConditionsPage);
+    goToRegister() {
+        this.navCtrl.push(ModalServiceProviderPage);
         console.log("Ok");
+    }
+
+  openModalToServiceProvider(){
+        const modal = this.modalCtrl.create(ModalServiceProviderPage);
+         modal.onDidDismiss( data =>{
+            this.serviceProvider = data;
+             console.log(this.serviceProvider);
+         });
+         modal.present();
     }
 
     // opneQr(){
@@ -98,19 +114,26 @@ export class Login {
     //     this.testService.getUID();
     // }
 
-    qrScannerCam(){
+
+    qrScannerCam() {
         this.barcode.scan().then(barcodeData => {
             if (!barcodeData) {
                 alert('Error: Contacte con el service provider.')
             } else {
+                console.log("barCode", barcodeData.text);
                 let jwt = require("jsonwebtoken");
                 let token = jwt.decode(barcodeData.text);
-                this.searchJSON(token);
-                let  ticketId = this.decode64;
-                if(ticketId != null && !undefined){
-                    this.navCtrl.push(QrResponsePage, {ticketId: ticketId});
-                }else{
-                    this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId});
+                console.log("token decoded", token);
+                let saveToken: PayLoadJwtCredential = token;
+                this.decode64 = Base64.decode(saveToken.vp.verifiableCredential);
+                let ticketId = this.decode64;
+                let name = saveToken.name;
+                let email = saveToken.email;
+
+                if (saveToken.vp != null && !undefined) {
+                    this.navCtrl.push(QrResponsePage, {ticketId: ticketId, name:name, email:email});
+                } else{
+                    this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId, name:name,email:email});
                 }
             }
         }).catch(err => {
@@ -118,30 +141,6 @@ export class Login {
         });
     }
 
-    searchJSON(data: any) {
-        for (let k in data) {
-            if (typeof data[k] == "object" && data[k] !== null) {
-                if (k == 'verifiableCredential') {
-                    this.decode64 = Base64.decode(data[k]);
-                    return true;
-                }
-                else{
-                    this.searchJSON(data[k]);
-                }
-            }
-        }
-    }
-
-    // activeMultiScanner(isMultiScanner: boolean, ticketId:any){
-    //     if (isMultiScanner){
-    //         this.navCtrl.push(QrResponsePage,{ticketId:ticketId});
-    //         setInterval( () =>{
-    //             this.navCtrl.push(QrReaderPage);
-    //         })
-    //     }else{
-    //         this.navCtrl.push(Login);
-    //     }
-    // }
 }
 
 

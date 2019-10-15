@@ -5,7 +5,6 @@ import {AppModule} from "../../app/app.module";
 
 @NgModule({
   declarations: [
-    QrResponsePage,
   ],
     imports: [
         IonicPageModule.forChild(QrResponsePage),

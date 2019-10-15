@@ -1,13 +1,14 @@
 <ion-content class="no-scroll">
-        <side-bar></side-bar>
+<!--        <side-bar></side-bar>-->
         <div style="margin: 16px">
-            <h2 class="logobwc" style="color: #000;">Solicitud Presentación</h2>
+            <h2 class="logobwc" style="color: #000;" (click)="goToRegister()">Solicitud Presentación</h2>
             <div class="qr">
                 <!--            <ion-img [src]='jwtqr'></ion-img>-->
                 <ngx-qrcode [qrc-value]="jwtPayload | json"
                             qrc-class="aclass"
                             qrc-errorCorrectionLevel="L"
-                            [qrc-version]="18">
+                            [qrc-version]="19"
+                (click)="openModalToServiceProvider()">
                 </ngx-qrcode>
             </div>
             <hr style="color:#a19dae">
@@ -20,8 +21,8 @@
                 <div class="info-person">
                     <h4 style="color:#a19dae">DATOS</h4>
                     <h6>Nombre</h6>
-                    <h6>Apellidos</h6>
-                    <h6>TicketId</h6>
+                    <h6>Email</h6>
+                    <h6>*TicketId</h6>
                 </div>
             </div>
             <hr style="color:#a19dae">

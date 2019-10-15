@@ -5,7 +5,7 @@ import {AppModule} from "../../app/app.module";
 
 @NgModule({
   declarations: [
-    QrResponseFailPage,
+
   ],
     imports: [
         IonicPageModule.forChild(QrResponseFailPage),

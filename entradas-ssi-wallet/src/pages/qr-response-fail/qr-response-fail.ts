@@ -17,11 +17,19 @@ import {errorHandler} from "@angular/platform-browser/src/browser";
 })
 export class QrResponseFailPage {
 
+
+    ticket: string;
+    name: string;
+    email: string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad QrResponseFailPage');
+      console.log('ionViewDidLoad QrResponseFailPage');
+      this.ticket = this.navParams.get('ticketId');
+      this.name = this.navParams.get('name');
+      this.email = this.navParams.get('email');
   }
 
   goScanner(){
