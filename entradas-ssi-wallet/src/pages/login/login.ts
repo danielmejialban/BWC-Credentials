@@ -14,7 +14,9 @@ import {User} from "../../models/User";
 import {clearScreenDown} from "readline";
 import {PayLoadJwtCredential} from "../../models/jwtCredentials";
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
-
+import { TokenSigner } from 'jsontokens'
+import { decodeToken } from 'jsontokens'
+import { encodeToken } from 'jsontokens'
 
 
 @IonicPage()
@@ -30,15 +32,17 @@ export class Login {
     decode64: string;
     pass: string;
     jwtPayload: any;
-    headerJwt = {
-        kid: "did:ala:quor:redt:345#keys-1",
-        typ: "JWT",
-        alg: "ES256"
-    };
+    headerJwt;
     multiScanner: boolean = false;
     user: User;
     serviceProvider: string;
+    date: Date = new Date();
+    expDate: Date = new Date();
 
+    elliptic = require('elliptic');
+    jsontokens = require('jsontokens');
+    ecurve = new this.elliptic.ec('secp256k1');
+    test = this.genKey();
 
     constructor(
         public barcodeScanner: BarcodeScanner,
@@ -47,10 +51,24 @@ export class Login {
         public sessionSecuredStorageService: SessionSecuredStorageService,
         private testService: TestService,
         private barcode: BarcodeScanner,) {
+
+        let keys = this.genKey();
+
+        let publicB64 = Base64.encode(keys.public1)
+        let base64Encoded  = Base64.encode(publicB64);
+
+        console.log("Base64",base64Encoded);
+        localStorage.setItem('base64',base64Encoded);
+
+        this.headerJwt = {
+            kid: "did:ala:quor:redt:" + base64Encoded + "#keys-1",
+            typ: "JWT",
+            alg: "ES256"
+        };
         this.jwtPayload = {
-            "iss": "did:alastria:quorum:testnet1:" + "MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKWYCoGtSiFSUeekSLkIeohUoxoMUTAng==",
-            "iat": 1525465044,
-            "exp": 1530735444,
+            "iss": "did:alastria:quorum:testnet1:",
+            "iat": this.date.getMilliseconds(),
+            "exp": 31536000000 + this.expDate.getMilliseconds(),
             "pr": {
                 "@context": [
                     "https://www.w3.org/2018/credentials/v1",
@@ -64,23 +82,40 @@ export class Login {
                         "@context": "JWT",
                         "levelOfAssurance": "Low",
                         "required": true,
-                        "field_ticket": "ticketID",
-                        // "field_name":"name",
-                        // "field_email":"email"
+                        "field_name": "ticketID",
                     }
                 ],
             }
         };
-        this.generateToken();
+
+        this.generateToken(keys);
     }
 
-    generateToken() {
-        let jwt = require("jsonwebtoken");
-        let token = jwt.sign(this.jwtPayload, "-----BEGIN EC PRIVATE KEY-----\n" +
-            "MHQCAQEEILI8IeZxN1DQskSvfl1rDnWp/9horl1xAwumWlk0fYejoAcGBSuBBAAK\n" +
-            "oUQDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKW\n" +
-            "YCoGtSiFSUeekSLkIeohUoxoMUTAng==\n" +
-            "-----END EC PRIVATE KEY-----", {header: this.headerJwt, algorithm: "ES256"});
+     genKey(){
+        var keypair = this.ecurve.genKeyPair();
+        var key = keypair.getPrivate().toString('hex');
+        var prefix = '0'.repeat(64 - key.length);
+        var public1 = keypair.getPublic().encode('hex');
+        console.log("key privada----"+key);
+        console.log("key publica----"+public1);
+        return {private: `${prefix}${key}`, public1};
+    }
+
+
+    generateToken(keys:any) {
+        // let token = jwt.sign(this.jwtPayload, "-----BEGIN EC PRIVATE KEY-----\n" +
+        //     "MHQCAQEEILI8IeZxN1DQskSvfl1rDnWp/9horl1xAwumWlk0fYejoAcGBSuBBAAK\n" +
+        //     "oUQDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKW\n" +
+        //     "YCoGtSiFSUeekSLkIeohUoxoMUTAng==\n" +
+        //     "-----END EC PRIVATE KEY-----", {header: this.headerJwt, algorithm: "ES256"});
+        // localStorage.setItem('token',JSON.stringify(token));
+        let tokenSigned = new this.jsontokens.TokenSigner('ES256k', keys.private).sign(this.jwtPayload,true,this.headerJwt);
+        console.log("TokenSigned --> ",tokenSigned);
+        let verified = new this.jsontokens.TokenVerifier('ES256k', keys.public1).verify(tokenSigned);
+        console.log("verifincando 333333",verified);
+        let testverified = new this.jsontokens.TokenVerifier('ES256k', this.test.public1).verify(tokenSigned);
+        console.log("verficando que de false ---> ", testverified);
+        return tokenSigned;
     }
 
     openPage(page: string) {
@@ -116,31 +151,66 @@ export class Login {
     // }
 
 
-    qrScannerCam() {
+    // qrScannerCam() {
+    //     this.barcode.scan().then(barcodeData => {
+    //         if (!barcodeData) {
+    //             alert('Error: Contacte con el service provider.')
+    //         } else {
+    //             console.log("barCode", barcodeData.text);
+    //             let jwt = require("jsonwebtoken");
+    //             let token = jwt.decode(barcodeData.text);
+    //             console.log("token decoded", token);
+    //             let saveToken: PayLoadJwtCredential = token;
+    //             this.decode64 = Base64.decode(saveToken.vp.verifiableCredential);
+    //             let ticketId = this.decode64;
+    //             let name = saveToken.name;
+    //             let email = saveToken.email;
+    //
+    //             if (saveToken.vp != null && !undefined) {
+    //                 this.navCtrl.push(QrResponsePage, {ticketId: ticketId, name:name, email:email});
+    //             } else{
+    //                 this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId, name:name,email:email});
+    //             }
+    //         }
+    //     }).catch(err => {
+    //         console.log('Error', err);
+    //     });
+    // }
+
+    qrScannerCam(){
         this.barcode.scan().then(barcodeData => {
             if (!barcodeData) {
                 alert('Error: Contacte con el service provider.')
             } else {
-                console.log("barCode", barcodeData.text);
                 let jwt = require("jsonwebtoken");
                 let token = jwt.decode(barcodeData.text);
-                console.log("token decoded", token);
-                let saveToken: PayLoadJwtCredential = token;
-                this.decode64 = Base64.decode(saveToken.vp.verifiableCredential);
-                let ticketId = this.decode64;
-                let name = saveToken.name;
-                let email = saveToken.email;
-
-                if (saveToken.vp != null && !undefined) {
-                    this.navCtrl.push(QrResponsePage, {ticketId: ticketId, name:name, email:email});
-                } else{
-                    this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId, name:name,email:email});
+                this.searchJSON(token);
+                let  ticketId = this.decode64;
+                if(ticketId != null && !undefined){
+                    this.navCtrl.push(QrResponsePage, {ticketId: ticketId});
+                }else{
+                    this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId});
                 }
             }
         }).catch(err => {
             console.log('Error', err);
         });
     }
+
+    searchJSON(data: any) {
+        for (let k in data) {
+            if (typeof data[k] == "object" && data[k] !== null) {
+                if (k == 'verifiableCredential') {
+                    this.decode64 = Base64.decode(data[k]);
+                    return true;
+                }
+                else{
+                    this.searchJSON(data[k]);
+                }
+            }
+        }
+    }
+
 
 }
 

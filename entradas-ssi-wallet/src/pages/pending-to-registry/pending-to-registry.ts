@@ -12,23 +12,24 @@ import {Provider} from "../../models/User";
 
 @IonicPage()
 @Component({
-  selector: 'page-pending-to-registry',
-  templateUrl: 'pending-to-registry.html',
+    selector: 'page-pending-to-registry',
+    templateUrl: 'pending-to-registry.html',
 })
 export class PendingToRegistryPage {
 
-    _tickets: string[] = [];
+    _tickets = [];
     serviceProvider: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-              private testService : TestService) {
-      this.serviceProvider = JSON.parse(localStorage.getItem('provider'));
-      console.log("obj", this.serviceProvider.provider);
+    constructor(public navCtrl: NavController, public navParams: NavParams,
+                private testService : TestService) {
+        this.serviceProvider = JSON.parse(localStorage.getItem('provider'));
+        console.log("obj", this.serviceProvider.provider);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PendingToRegistryPage');
-      let tickets = localStorage.getItem('TicketsID');
-      this._tickets.push(tickets);
-  }
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad PendingToRegistryPage');
+        let tickets = localStorage.getItem('TicketsID');
+        this._tickets.push(tickets);
+        console.log("tickets lenght",this._tickets.length);
+    }
 }

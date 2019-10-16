@@ -8,8 +8,8 @@
         </button>
     </div>
     <!--- ACEPTADO -->
-    <ion-card-content>
-        <ion-card *ngIf="_tickets.length > 0">
+    <ion-card-content *ngIf="_tickets.length > 1">
+        <ion-card>
             <div class="card-info">
                 <h3 class="title-card-info">{{serviceProvider.provider}}</h3>
                 <div class="level">
@@ -22,13 +22,13 @@
                     <img src="assets/images/hdpi/ico-check.png">
                     <h5 style="color: green !important; margin-top: auto; margin-left: 5px">Aceptado</h5>
                 </div>
-                <h5>PRESENTADA EL: <strong>10/10/2019</strong></h5>
+                <h5>PRESENTADA EL: <strong>{{actualDay | date}}</strong></h5>
             </div>
         </ion-card>
     </ion-card-content>
     <!-- RECHAZADO -->
     <ion-card-content>
-        <ion-card *ngIf="_tickets.length > 0">
+        <ion-card>
             <div class="card-info">
                 <h3 class="title-card-info">{{serviceProvider.provider}}</h3>
                 <div class="level">
@@ -41,7 +41,7 @@
                     <img src="assets/images/hdpi/ico-close-red.png">
                     <h5 style="color: red !important; margin-top: auto; margin-left: 5px">Rechazado</h5>
                 </div>
-                <h5>PRESENTADA EL: <strong>10/10/2019</strong></h5>
+                <h5>PRESENTADA EL: <strong>{{actualDay | date}}</strong></h5>
             </div>
         </ion-card>
     </ion-card-content>
