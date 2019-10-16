@@ -1,0 +1,17 @@
+<!--
+  Generated template for the ModalServiceProviderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="transparent">
+    <div class="modal_content" style="margin-top: 100px;">
+        <h6>Service Provider</h6>
+        <ion-input id="pwd" no-lines style="border-radius: 10px; border-style: solid; border-color: transparent;border-spacing: 54px; background-color: #bdbbd1ff;   border-bottom-color: transparent !important;
+        box-shadow: none !important;" [(ngModel)]="serviceProvider" required placeholder="Introduzca el nombre del Provider">
+        </ion-input>
+        <button ion-button color="success" class="btn-save"  style="margin-top:10px;" (click)="closeModal()" >
+            Guardar
+        </button>
+    </div>
+</ion-content>

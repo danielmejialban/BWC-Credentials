@@ -99,13 +99,14 @@ export class Login {
         console.log("Ok");
     }
 
-  openModalToServiceProvider(){
+    openModalToServiceProvider(){
         const modal = this.modalCtrl.create(ModalServiceProviderPage);
-         modal.onDidDismiss( data =>{
+        modal.onDidDismiss( data =>{
             this.serviceProvider = data;
-             console.log(this.serviceProvider);
-         });
-         modal.present();
+            console.log(this.serviceProvider);
+            localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
+        });
+        modal.present();
     }
 
     // opneQr(){

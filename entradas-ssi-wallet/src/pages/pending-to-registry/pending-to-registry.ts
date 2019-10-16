@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {TestService} from "../../services/test.service";
+import {Provider} from "../../models/User";
 
 /**
  * Generated class for the PendingToRegistryPage page.
@@ -17,16 +18,17 @@ import {TestService} from "../../services/test.service";
 export class PendingToRegistryPage {
 
     _tickets: string[] = [];
+    serviceProvider: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private testService : TestService) {
-
+      this.serviceProvider = JSON.parse(localStorage.getItem('provider'));
+      console.log("obj", this.serviceProvider.provider);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PendingToRegistryPage');
-      let tickets = localStorage.getItem('TicketsID')
+      let tickets = localStorage.getItem('TicketsID');
       this._tickets.push(tickets);
   }
-
 }

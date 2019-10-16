@@ -1,5 +1,5 @@
 <ion-content>
-<!--    <side-bar></side-bar>-->
+    <side-bar></side-bar>
     <div class="sync">
         <h2 style="font-weight: bold">Pendientes de registrar</h2>
         <button ion-button small style="background-color:#bdbbd1ff">
@@ -11,7 +11,7 @@
     <ion-card-content>
         <ion-card *ngIf="_tickets.length > 0">
             <div class="card-info">
-                <h3 class="title-card-info">Entradas sala VIP</h3>
+                <h3 class="title-card-info">{{serviceProvider.provider}}</h3>
                 <div class="level">
                     <img src="assets/images/hdpi/credencial-B.png">
                     <h2>Medio</h2>
@@ -30,7 +30,7 @@
     <ion-card-content>
         <ion-card *ngIf="_tickets.length > 0">
             <div class="card-info">
-                <h3 class="title-card-info">Entradas sala VIP</h3>
+                <h3 class="title-card-info">{{serviceProvider.provider}}</h3>
                 <div class="level">
                     <img src="assets/images/hdpi/credencial-B.png">
                     <h2>Medio</h2>
