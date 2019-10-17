@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, List, NavController, NavParams} from 'ionic-angular';
 import {User} from "../../models/User";
-import {Login} from "../login/login";
-import {ResponseQR} from "../../models/jwtCredentials";
 
 /**
  * Generated class for the QrResponsePage page.
@@ -13,41 +11,30 @@ import {ResponseQR} from "../../models/jwtCredentials";
 
 @IonicPage()
 @Component({
-  selector: 'page-qr-response',
-  templateUrl: 'qr-response.html',
+    selector: 'page-qr-response',
+    templateUrl: 'qr-response.html',
     styleUrls: ['/qr-response.scss']
 })
 export class QrResponsePage {
 
-    ticket: string;
-    name: string;
-    email: string;
+    wanted:string;
     ticketsId = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-      this.saveParamsInLocalStorage();
-  }
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
+        this.saveParamsInLocalStorage();
+    }
 
-  ionViewDidLoad() {
-  }
-
-  saveParamsInLocalStorage(){
-      this.ticket = this.navParams.get('ticketId');
-      this.name = this.navParams.get('name');
-      this.email = this.navParams.get('email');
-      this.ticketsId.push(this.ticket);
-      console.log("List",this.ticketsId);
-      console.log(this.ticket);
-      console.log(this.name);
-      console.log(this.email);
-      localStorage.setItem("TicketsID",JSON.stringify(this.ticketsId));
-
-  }
-
-    goScanner(){
-        this.navCtrl.popToRoot();
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad QrResponsePage');
     }
 
 
+    saveParamsInLocalStorage(){
+        this.wanted= this.navParams.get('ticketId');
+        console.log(this.wanted);
+        this.ticketsId.push(this.wanted);
+        console.log("List",this.ticketsId);
+        localStorage.setItem("TicketsID",JSON.stringify(this.ticketsId));
+    }
 
 }
