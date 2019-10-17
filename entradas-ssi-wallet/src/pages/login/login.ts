@@ -16,7 +16,7 @@ import {PayLoadJwtCredential} from "../../models/jwtCredentials";
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
 import { TokenSigner } from 'jsontokens'
 import { decodeToken } from 'jsontokens'
-import { encodeToken } from 'jsontokens'
+import {tick} from "@angular/core/testing";
 
 
 @IonicPage()
@@ -184,12 +184,14 @@ export class Login {
             } else {
                 let jwt = require("jsonwebtoken");
                 let token = jwt.decode(barcodeData.text);
+                this.decode64 = undefined;
                 this.searchJSON(token);
                 let  ticketId = this.decode64;
-                if(ticketId != null && !undefined){
-                    this.navCtrl.push(QrResponsePage, {ticketId: ticketId});
+                console.log("ticket--->",ticketId);
+                if(this.decode64 != null && this.decode64 != undefined){
+                    this.navCtrl.push(QrResponsePage, {ticketId: this.decode64});
                 }else{
-                    this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId});
+                    this.navCtrl.push(QrResponseFailPage, {ticketId: this.decode64});
                 }
             }
         }).catch(err => {
@@ -202,7 +204,6 @@ export class Login {
             if (typeof data[k] == "object" && data[k] !== null) {
                 if (k == 'verifiableCredential') {
                     this.decode64 = Base64.decode(data[k]);
-                    return true;
                 }
                 else{
                     this.searchJSON(data[k]);

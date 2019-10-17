@@ -135,10 +135,10 @@
   resolved "https://registry.yarnpkg.com/@ionic-native/google-analytics/-/google-analytics-4.4.2.tgz#5c2021cc08c412e4c088c4657a7e125396f3d526"
   integrity sha512-xNXdGcYhM3supUevAqDmiqWSQ3WOhNboPOUWu+N+afXdPQyf4lbBhhTTGUdLnBexW90+JqoO+5bjrR4NwFhTHQ==
 
-"@ionic-native/qr-scanner@^5.14.0":
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/@ionic-native/qr-scanner/-/qr-scanner-5.14.0.tgz#bcf39f0a1b07a11c49f0ce08e7978cf7aeccbe18"
-  integrity sha512-nEnHKBkDfsPPiolXGsgLoHynYQJegquK1ECwFEPZpT+1NvK7PZmPZhv6+e+en8qiBZfJaUqrYKiZS3P302a4Kg==
+"@ionic-native/qr-scanner@^5.15.0":
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/qr-scanner/-/qr-scanner-5.15.0.tgz#6682c276a7aaaa14eb50fa69273de6e3f7e10e9b"
+  integrity sha512-9dFHXfZGJ09ir/nP2INGyFFWaEPLxmYKVIh1s0+em2T/4loI74FAqQ05d7DV80LIUBuJFxR9Lmmnax3T8nm+5Q==
   dependencies:
     "@types/cordova" latest
 
@@ -6114,10 +6114,10 @@ webpack@3.12.0:
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
 
-webpack@^4.41.0:
-  version "4.41.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.0.tgz#db6a254bde671769f7c14e90a1a55e73602fc70b"
-  integrity sha512-yNV98U4r7wX1VJAj5kyMsu36T8RPPQntcb5fJLOsMz/pt/WrKC0Vp1bAlqPLkA1LegSwQwf6P+kAbyhRKVQ72g==
+webpack@^4.41.2:
+  version "4.41.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.2.tgz#c34ec76daa3a8468c9b61a50336d8e3303dce74e"
+  integrity sha512-Zhw69edTGfbz9/8JJoyRQ/pq8FYUoY0diOXqW0T6yhgdhCv6wr0hra5DwwWexNRns2Z2+gsnrNcbe9hbGBgk/A==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
