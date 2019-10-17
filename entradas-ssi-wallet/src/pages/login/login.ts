@@ -43,6 +43,7 @@ export class Login {
     jsontokens = require('jsontokens');
     ecurve = new this.elliptic.ec('secp256k1');
     test = this.genKey();
+    resultToken: any;
 
     constructor(
         public barcodeScanner: BarcodeScanner,
@@ -88,7 +89,7 @@ export class Login {
             }
         };
 
-        this.generateToken(keys);
+
     }
 
      genKey(){
@@ -103,19 +104,16 @@ export class Login {
 
 
     generateToken(keys:any) {
-        // let token = jwt.sign(this.jwtPayload, "-----BEGIN EC PRIVATE KEY-----\n" +
-        //     "MHQCAQEEILI8IeZxN1DQskSvfl1rDnWp/9horl1xAwumWlk0fYejoAcGBSuBBAAK\n" +
-        //     "oUQDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKW\n" +
-        //     "YCoGtSiFSUeekSLkIeohUoxoMUTAng==\n" +
-        //     "-----END EC PRIVATE KEY-----", {header: this.headerJwt, algorithm: "ES256"});
-        // localStorage.setItem('token',JSON.stringify(token));
         let tokenSigned = new this.jsontokens.TokenSigner('ES256k', keys.private).sign(this.jwtPayload,true,this.headerJwt);
         console.log("TokenSigned --> ",tokenSigned);
         let verified = new this.jsontokens.TokenVerifier('ES256k', keys.public1).verify(tokenSigned);
         console.log("verifincando 333333",verified);
-        let testverified = new this.jsontokens.TokenVerifier('ES256k', this.test.public1).verify(tokenSigned);
-        console.log("verficando que de false ---> ", testverified);
         return tokenSigned;
+    }
+
+
+    decodeToken(keys:any){
+
     }
 
     openPage(page: string) {
