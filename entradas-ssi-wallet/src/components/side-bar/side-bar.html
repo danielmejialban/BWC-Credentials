@@ -1,0 +1,43 @@
+<ion-menu persistent="true" [content]="content" type="overlay">
+    <ion-header>
+        <button>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-header>
+    <ion-content>
+        <ion-list class="login-menu">
+            <button ion-item (click)="openPage('login')">
+                <div item-start><img src="assets/images/hdpi/ico-02.png"></div>Inicio
+            </button>
+            <button ion-item (click)="openPage('pendingToRegister')">
+                <div item-start><ion-icon name="cloud-upload"></ion-icon></div>Accesos no registrados
+            </button>
+<!--            <button ion-item (click)="openPage('reportProblem')">-->
+<!--                <div item-start> <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon></div>Información de interés-->
+<!--            </button>-->
+<!--            <button ion-item (click)="openPage('legal')">-->
+<!--                <div item-start><ion-icon name="bonfire"></ion-icon></div>Reportar un problema-->
+<!--            </button>-->
+<!--            <button ion-item (click)="openPage('legal')">-->
+<!--                <div item-start><ion-icon name="paper"></ion-icon></div>Aviso legal-->
+<!--            </button>-->
+            <button ion-item (click)="openPage('legal')">
+                <div item-start><ion-icon name="exit"></ion-icon></div>Salir
+            </button>
+        </ion-list>
+        <label class="version-info" style="margin-left:20px !important">Versión AlastriaID 1.1</label>
+    </ion-content>
+</ion-menu>
+
+<ion-navbar [hideBackButton]="true"  class="nav-bar-custom">
+    <div class="button-container">
+        <ion-title>
+            <img  class="img-header" src="assets/images/hdpi/Header-background.png"/>
+            <img  class="img-header-logos" src="assets/images/hdpi/Header-logos.png"/>
+        </ion-title>
+    </div>
+    <button class="btn-side-bar" #content ion-button menuToggle clear icon-start>
+<!--        <ion-icon src="assets/images/hdpi/Header-iconW.png"></ion-icon>-->
+        <img clas="img-button-icon" src="assets/images/hdpi/Header-iconW.png"/>
+    </button>
+</ion-navbar>

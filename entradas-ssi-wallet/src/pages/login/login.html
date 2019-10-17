@@ -1,83 +1,46 @@
-<ion-menu [content]="content">
-    <ion-header>
-    </ion-header>
-    <ion-content>
-        <ion-list class="login-menu">
-            <button ion-item (click)="openPage('changeUser')">
-                <div item-start><img src="assets/svg/user.svg" /></div>Cambiar de usuario
-            </button>
-            <button ion-item (click)="openPage('infoPage')">
-                <div item-start><img src="assets/svg/bullhorn.svg" /></div>Información de interés
-            </button>
-            <button ion-item (click)="openPage('reportProblem')">
-                <div item-start><img src="assets/svg/flame.svg" /></div>Reportar Problema
-            </button>
-            <button ion-item (click)="openPage('legal')">
-                <div item-start><img src="assets/svg/info.svg" /></div>Aviso Legal
-            </button>
-        </ion-list>
-        <label class="version-info">Versión AlastriaID 1.1</label>
-    </ion-content>
-</ion-menu>
-
-<ion-nav class="main" id="nav" #content [root]="Login">
-</ion-nav>
-
-<ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle clear icon-start>
-            <img class="menu" name='menu' src="assets/svg/hamburguer-menu.svg">
-        </button>
-    </ion-navbar>
-</ion-header>
-
-<!-- Themes Login + logo 1 -->
-<ion-content ion-fixed class="mainContent" style="z-index: 1;" *ngIf="data">
-    <div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 100%; align-items: center">
-        <ion-grid *ngIf="data != null">
-            <ion-row style="display: flex; flex-direction: column; align-items: center;">
-                <ion-col style="margin-top: 25px;">
-                    <h1>ENTRADAS SSI</h1>
-                    <br />
-                </ion-col>
-                <!-- Login -->
-                <ion-list>
-
-                    <!-- User -->
-                    <div style="margin-top:35px; display: flex; align-items: flex-end" *ngIf="!data.isRegistered; else login">
-<!--                        <img class="iconLogin" src="assets/images/logo/user.png" />-->
-<!--                        <ion-item style="background-color: transparent;">-->
-<!--                            <ion-label floating class="grey">User</ion-label>-->
-<!--                            <ion-input class="menu" type="text" [(ngModel)]="user"></ion-input>-->
-<!--                        </ion-item>-->
-                    </div>
-                    <ng-template #login>
-                        <ion-label floating class="nameUser">Hola {{ data.userRegister }}, bienvenid@</ion-label>
-                    </ng-template>
-
-
-                    <!-- Password -->
-                    <div style="display: flex; align-items: flex-end">
-                        <img class="iconLogin" src="assets/images/logo/pass.png" />
-                        <ion-item style="background-color: transparent;">
-                            <ion-label floating class="grey">Password</ion-label>
-                            <ion-input class="menu" type="password" [(ngModel)]="pass"></ion-input>
-                        </ion-item>
-                    </div>
-
-                </ion-list>
-
-                <!-- Boton Login Alastria -->
-                <ion-col style="width: 100%; margin-top: 50px;">
-                    <button ion-button block class="btnLogin" (click)="onEvent('onLogin')">{{data.loginalastria}}</button>
-                </ion-col>
-                <ion-col>
-                    <div class="grey" style="padding-top: 5px">
-                        ¿Aún no tienes cuenta? <a class="menu" (click)="onEvent('onRegister')"> {{data.newAccount}}
-                        </a>
-                    </div>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </div>
+<ion-content class="no-scroll">
+        <side-bar></side-bar>
+        <div style="margin: 16px">
+            <h2 class="logobwc" style="color: #000;" (click)="goToRegister()">Solicitud Presentación</h2>
+            <div class="qr">
+                <!--            <ion-img [src]='jwtqr'></ion-img>-->
+                <ngx-qrcode [qrc-value]="jwtPayload | json"
+                            qrc-class="aclass"
+                            qrc-errorCorrectionLevel="L"
+                            [qrc-version]="19"
+                (click)="openModalToServiceProvider()">
+                </ngx-qrcode>
+            </div>
+            <hr style="color:#a19dae">
+            <!-- nivel de la solicitud -->
+            <div class="contendor-info-user">
+                <div class="user">
+                 <h4 style="color:#a19dae">NIVEL</h4>
+                    <h6> <ion-icon name="arrow-up"></ion-icon>Básico</h6>
+                </div>
+                <div class="info-person">
+                    <h4 style="color:#a19dae">DATOS</h4>
+                    <h6>Nombre</h6>
+                    <h6>Email</h6>
+                    <h6>*TicketId</h6>
+                </div>
+            </div>
+            <hr style="color:#a19dae">
+            <div class="txt">
+                <p>Muestre el código QR al usuario para que proceda a su escaneo.</p>
+            </div>
+            <hr style="color:#a19dae">
+            <div class="scanner">
+                <div class="switch-multi">
+                    <ion-label>Multi Scanner</ion-label>
+                    <ion-toggle></ion-toggle>
+                </div>
+                <div class="btn-scanner">
+                        <button ion-button color="success" (click)="qrScannerCam()">
+                            Escanear
+                            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+                        </button>
+                </div>
+            </div>
+        </div>
 </ion-content>

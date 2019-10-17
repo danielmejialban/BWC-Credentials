@@ -1,0 +1,56 @@
+<ion-content scrollDownOnLoad="false">
+    <side-bar></side-bar>
+    <ion-card class="custom-card">
+        <div class="general">
+            <div class="accept">
+                <h2 class="tittle">Rechazado</h2>
+            </div>
+            <div class="accept">
+                <img  src="assets/images/hdpi/img-KO.png">
+            </div>
+            <div class="data">
+                <h2  style="color: #bdbbd1ff; font-family: sans-serif; padding-bottom: 5px">DATOS</h2>
+            </div>
+            <div class="data" *ngIf="name">
+                <h2 class="centered-title">
+                    <img src="assets/images/hdpi/ico-check.png" class="img-ko">
+                    Nombre
+                </h2>
+            </div>
+            <div class="data" *ngIf="!name || name === undefined || name === null">
+                <h2 class="centered-title">
+                    <img src="assets/images/hdpi/ico-close-red.png" class="img-ko">
+                    Nombre
+                </h2>
+            </div>
+            <div class="data" *ngIf="email">
+                <h2 class="centered-title">
+                    <img src="assets/images/hdpi/ico-check.png" class="img-ko">
+                    Email
+                </h2>
+            </div>
+            <div class="data" *ngIf="!email || email === undefined || email === null">
+                <h2 class="centered-title">
+                    <img src="assets/images/hdpi/ico-close-red.png" class="img-ko">
+                    Email
+                </h2>
+            </div>
+            <div class="data" *ngIf="ticket">
+                <h2 class="centered-title">
+                    <img src="assets/images/hdpi/ico-check.png" class="img-ko">
+                    Ticket ID
+                </h2>
+            </div>
+            <div class="data" *ngIf="!ticket">
+                <h2 class="centered-title">
+                    <img src="assets/images/hdpi/ico-close-red.png" class="img-ko">
+                    Ticket ID
+                </h2>
+            </div>
+        </div>
+    </ion-card>
+    <!-- Butoton back-->
+    <div class="accept">
+        <button ion-button color="danger" (click)="goScanner()">Volver</button>
+    </div>
+</ion-content>

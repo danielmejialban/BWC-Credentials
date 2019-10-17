@@ -1,179 +1,131 @@
-/*  #Style Login + logo 1
-================================================*/
-login-layout-1 {
-  ion-grid,
-  ion-row {
-    height: 100%;
-  }
 
-  // Settings Logo
-  img {
-    max-width: 72px;
-    max-height: 72px;
-    margin-bottom: 24px;
-    display: block;
-  }
-
-  ion-item {
-    padding-left: 0 !important;
-    padding-bottom: 15px !important;
-
-    [error-field] {
-      margin: 0 !important;
-      position: absolute !important;
-      bottom: 0 !important;
-      right: 0 !important;
-      font-size: 12px;
-    }
-    .item-inner {
-      border-bottom-color: theme-colors('textColors', 'secondary') !important;
-      box-shadow: none !important;
-  }
-  ion-label {
-    margin: 0 !important;
-  }
-}
-
-  [stacked] {
-    font-size: 10px !important;
-  }
-
-  [login-title] {
-    color: color($loginPage, login-title-logo-1);
-  }
-
-  [login-subtitle] {
-    color: color($loginPage, login-subtitle-logo-1);
-  }
-
-
-  [description] {
-    font-size: $h5-font-size !important;
-    font-weight: 100;
-    letter-spacing: 1px;
-    color: theme-colors('textColors', 'secondary');
-  }
-
-  // Settings Button
-  [bottom-form] {
-    button:nth-child(1) {
-      margin: 12px 0;
+    .logobwc {
+        text-align: center;
     }
 
-    [default-button] {
-      font-weight: 400 !important;
+    .qr {
+        display: block;
+        text-align: center;
     }
-  }
-}
 
-.version-info {
-  position: absolute;
-  bottom: 15px;
-  left: 6px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 14px;
-  color: #325B8E;
-}
+    .user {
+        display: flow-root
+    }
 
-.login-menu button div {
-  width: 45px;
+    .contendor-info-user {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 10px;
+    }
 
-}
+    .txt {
+        display: block;
+        text-align: center;
+    }
 
-.main {
-  background: linear-gradient(153.34deg, rgba(50, 91, 142, 0.8) 7.11%, rgba(0, 178, 188, 0.8) 78.61%), url('../assets/images/background/bg-image.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  mix-blend-mode: normal;
-  filter: blur(1px);
-}
+    .scanner {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 50px;
+    }
 
-.toolbar img {
-  max-height: 37px;
-}
+    .toggle-md {
+        position: relative;
+        width: 36px;
+        height: 14px;
+        box-sizing: content-box;
+        contain: strict;
+        padding-left: 5px;
+    }
 
-.toolbar-background {
-  background-color: rgba(0,0,0,0);
-  color: #FFFFFF;
-}
-.mainContent {
-  background-color: rgba(0,0,0,0);
-  color: #FFFFFF;
-}
+    .btn-scanner {
+        display: flex;
+    }
 
-.menu {
-  color: #FFFFFF;
-}
+    .switch-multi {
+        display: flex;
+        justify-items: baseline;
+        align-items: center;
+    }
 
-.grey,
-.item-inner .input-wrapper .grey {
-  color :#cccccc;
-}
+    h6 title-scanner {
+        margin-top: 13px;
+        padding-top: 15px;
+    }
 
-.grey input::placeholder {
-  color :#cccccc;
-}
+    ion-img {
+        display: inline-block;
+        min-height: 100% !important;
+        background: #eee;
+        contain: inherit !important;
+    }
 
-.header-ios {
-  padding-top:24px;
-}
+    h6 {
+        margin: 5px;
+    }
 
-.label {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 18px;
+    h6:first-child {
+        margin-top: 0.9rem;
+    }
 
-  color: #325B8E;
-}
+    .img-in2 {
+        width: 175px;
+        text-align: center;
+        justify-content: center;
+    }
 
-.login-menu {
-  margin-top: 86px;
-  margin-right: 15px;
-}
+    .scroll-content {
+        padding: 0 !important;
+        background-color: #f0f0f5ff;
+    }
 
-.logo {
-  padding-left: 10px;
-}
+    .toolbar-md {
+        padding: 0 !important;
+        min-height: 0 !important;
+    }
 
-.btnLogin {
-  background: linear-gradient(90deg, #325B8E 0%, #00CAD6 100%);
-  border-radius: 30px;
-}
+    .toolbar-title-md {
+        padding: 0 !important;
+    }
 
-.btnLogin:before {
-  content: '>';
-  position: absolute;
-  left: 90%;
-  top: 10px;
-}
+    .img-button-icon {
+        height: 1em;
+    }
 
-.iconLogin {
-  height: 27px;
-}
+    .scanner {
+        padding: 0;
+    }
 
-.fingerPrint {
-  font-size: 18px;
-  color: #FFFFFF;
-}
+    .toggle-md {
+        position: relative;
+        width: 36px;
+        height: 14px;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        contain: strict;
+        margin-top: 0.8rem;
+    }
 
-.nameUser {
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: center;
-    padding-bottom: 10%;
-}
+    .toggle-md .toggle-icon {
+        height: 14px;
+    }
+
+    .button-md {
+        border-radius: 10px;
+        background-color: #6ca966ff;
+    }
+
+    .toggle-md.toggle-checked .toggle-icon {
+        background-color: #6ca966ff;
+    }
+
+    .button-md:hover:not(.disable-hover) {
+        background-color: #6ca966ff !important;
+    }
 
 
-.list-md .item-input:last-child {
-  border-bottom: 0;
-}
+    img {
+        max-width: 60%;
+        border: 0;
+    }
 
-.col {
-    width: inherit;
-    min-height: inherit;
-}

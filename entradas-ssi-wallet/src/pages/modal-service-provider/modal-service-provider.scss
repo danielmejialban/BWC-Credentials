@@ -1,0 +1,36 @@
+page-modal-service-provider {
+    ion-content {
+        left: 0;
+        top: 90px;
+        display: block;
+        width: 80%;
+        margin: 4% 10% 10% 10%;
+        height: 315px;
+        contain: layout size style;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .transparent {
+        background: transparent !important;
+    }
+
+    .image-modal {
+        width: 100% !important;
+        height: 100%;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .scroll-content{
+        border-style: solid;
+        border-radius: 15px;
+        border-color: #e2e2e2;
+    }
+
+    .modal_content{
+        margin-top: 90px;
+        padding: 8px;
+    }
+}

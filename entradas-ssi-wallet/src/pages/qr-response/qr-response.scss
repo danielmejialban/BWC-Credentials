@@ -1,0 +1,79 @@
+page-qr-response{
+    .accept {
+        display: flex;
+        justify-content: center;
+        padding:10px;
+    }
+
+    .icono-check {
+        display: inline-block;
+        font-size: 19.2em;
+        color: green;
+    }
+
+    .check-list {
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .custom-card {
+        height: 60%;
+        border-radius: 10px;
+    }
+
+    ion-card img {
+        width: 100%;
+    }
+
+    img {
+        max-width: 10em;
+    }
+
+    centered{
+        display: flex;
+        justify-content: center;
+    }
+
+    .tittle{
+        font-family: "Comic Sans MS";
+        font-weight: 700;
+        text-transform: none;
+        font-size: 24px;
+        letter-spacing: 0px;
+        color: #6ca966ff
+
+    }
+
+    .img-ko {
+        display: flex !important;
+        justify-content: center !important;
+        height: 100% !important;
+        width: 20% !important;
+        padding: 3px !important;
+    }
+
+    .centered-title{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .data{
+        display: flex;
+        justify-content: center;
+    }
+
+    .general{
+        height: 95%;
+        border-radius: 10px;
+        border-style: solid;
+        border-spacing: 54px;
+        border-color: #6ca966ff;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 5px;
+        margin: 10px;
+    }
+}

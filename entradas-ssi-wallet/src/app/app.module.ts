@@ -2,7 +2,7 @@ import { IdentityDataListModule } from './../components/identity-data-list/ident
 import { Activities } from './../services/activities/activities.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import {IonicApp, IonicErrorHandler, IonicModule, NavController} from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -30,13 +30,23 @@ import { ConfirmAccess } from '../pages/confirm-access/confirm-access';
 import { HttpClientModule } from "@angular/common/http"
 import { TokenService } from '../services/token-service';
 import { ToastService } from '../services/toast-service';
-import {RegisterPrivacyConditionsPage} from "../pages/register/register-hub/register-privacy-conditions/register-privacy-conditions";
 import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hub/register-privacy-conditions/register-privacy-conditions.module";
+import {SideBarComponent} from "../components/side-bar/side-bar";
+import {QrReaderPage} from "../pages/qr-reader/qr-reader";
+import {QRScanner} from "@ionic-native/qr-scanner/ngx";
+import {PendingToRegistryPage} from "../pages/pending-to-registry/pending-to-registry";
+import {TestService} from "../services/test.service";
+import {QrResponsePage} from "../pages/qr-response/qr-response";
+import {QrResponsePageModule} from "../pages/qr-response/qr-response.module";
+import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
+import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-service-provider";
+
+
 @NgModule({
     declarations: [
         MyApp,
-        HomePage,
         Login,
+        HomePage,
         InfoPage,
         ProfilePage,
         DetailProfilePage,
@@ -45,14 +55,16 @@ import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hu
         ConfirmLogin,
         WalkthroughPage,
         ConfirmAccess,
+        SideBarComponent,
+        QrReaderPage,
+        PendingToRegistryPage,
+        QrResponsePage,
+        QrResponseFailPage,
+        ModalServiceProviderPage
     ],
     imports: [
         BrowserModule,
-        IonicModule.forRoot(MyApp, {
-            backButtonText: 'Tu AlastriaID',
-            backButtonIcon: 'ios-arrow-back'
-        }
-        ),
+        IonicModule.forRoot(MyApp),
         RegisterFormModule,
         RegisterPrivacyConditionsPageModule,
         TabsPageModule,
@@ -78,7 +90,14 @@ import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hu
         ConfirmAccess,
         WalkthroughPage,
         ConfirmLogin,
-
+        QrReaderPage,
+        PendingToRegistryPage,
+        QrResponsePage,
+        QrResponseFailPage,
+        ModalServiceProviderPage
+    ],
+    exports: [
+        SideBarComponent
     ],
     providers: [
         StatusBar,
@@ -90,9 +109,11 @@ import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hu
         SessionSecuredStorageService,
         IdentitySecuredStorageService,
         Activities,
-        { provide: ErrorHandler, useClass: IonicErrorHandler },
+        {provide: ErrorHandler, useClass: IonicErrorHandler},
         ToastService,
-        TokenService
+        TokenService,
+        QRScanner,
+        TestService,
     ]
 })
 export class AppModule { }
