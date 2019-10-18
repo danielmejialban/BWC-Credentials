@@ -30,7 +30,23 @@ page-modal-service-provider {
     }
 
     .modal_content{
-        margin-top: 90px;
+        margin-top: 0 !important;
         padding: 8px;
+    }
+    .div-btn-close{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .content-provider{
+        margin-top: 60px;
+    }
+
+    .btn-exit{
+        background-color: transparent;
+    }
+
+    .button-md:hover:not(.disable-hover) {
+        background-color:  transparent !important;
     }
 }
