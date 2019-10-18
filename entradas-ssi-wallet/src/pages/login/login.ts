@@ -5,7 +5,6 @@ import { ContructionsPage } from '../contructions/contructions';
 import { SessionSecuredStorageService } from '../../services/securedStorage.service';
 import { HomePage } from '../home/home';
 import {RegisterPrivacyConditionsPage} from "../register/register-hub/register-privacy-conditions/register-privacy-conditions";
-import {QrReaderPage} from "../qr-reader/qr-reader";
 import {TestService} from "../../services/test.service";
 import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
@@ -38,11 +37,12 @@ export class Login {
     serviceProvider: string;
     date: Date = new Date();
     expDate: Date = new Date();
-
     elliptic = require('elliptic');
     jsontokens = require('jsontokens');
     ecurve = new this.elliptic.ec('secp256k1');
     test = this.genKey();
+    token: any;
+
 
     constructor(
         public barcodeScanner: BarcodeScanner,
@@ -88,7 +88,7 @@ export class Login {
             }
         };
 
-        this.generateToken(keys);
+        this.token = this.generateToken(keys);
     }
 
      genKey(){
@@ -109,12 +109,10 @@ export class Login {
         //     "YCoGtSiFSUeekSLkIeohUoxoMUTAng==\n" +
         //     "-----END EC PRIVATE KEY-----", {header: this.headerJwt, algorithm: "ES256"});
         // localStorage.setItem('token',JSON.stringify(token));
-        let tokenSigned = new this.jsontokens.TokenSigner('ES256k', keys.private).sign(this.jwtPayload,true,this.headerJwt);
+        let tokenSigned = new this.jsontokens.TokenSigner('ES256k', keys.private).sign(this.jwtPayload,false,this.headerJwt);
         console.log("TokenSigned --> ",tokenSigned);
         let verified = new this.jsontokens.TokenVerifier('ES256k', keys.public1).verify(tokenSigned);
-        console.log("verifincando 333333",verified);
-        let testverified = new this.jsontokens.TokenVerifier('ES256k', this.test.public1).verify(tokenSigned);
-        console.log("verficando que de false ---> ", testverified);
+        // console.log("verifincando 333333",verified);
         return tokenSigned;
     }
 
@@ -184,6 +182,8 @@ export class Login {
             } else {
                 let jwt = require("jsonwebtoken");
                 let token = jwt.decode(barcodeData.text);
+                console.log("barcodeData",barcodeData);
+                console.log("BarcodeDataText --> ",token);
                 this.decode64 = undefined;
                 this.searchJSON(token);
                 let  ticketId = this.decode64;
@@ -204,6 +204,7 @@ export class Login {
             if (typeof data[k] == "object" && data[k] !== null) {
                 if (k == 'verifiableCredential') {
                     this.decode64 = Base64.decode(data[k]);
+                    console.log("---",this.decode64);
                 }
                 else{
                     this.searchJSON(data[k]);

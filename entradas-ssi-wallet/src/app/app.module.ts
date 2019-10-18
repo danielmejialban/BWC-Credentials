@@ -32,7 +32,6 @@ import { TokenService } from '../services/token-service';
 import { ToastService } from '../services/toast-service';
 import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hub/register-privacy-conditions/register-privacy-conditions.module";
 import {SideBarComponent} from "../components/side-bar/side-bar";
-import {QrReaderPage} from "../pages/qr-reader/qr-reader";
 import {QRScanner} from "@ionic-native/qr-scanner/ngx";
 import {PendingToRegistryPage} from "../pages/pending-to-registry/pending-to-registry";
 import {TestService} from "../services/test.service";
@@ -56,7 +55,6 @@ import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-se
         WalkthroughPage,
         ConfirmAccess,
         SideBarComponent,
-        QrReaderPage,
         PendingToRegistryPage,
         QrResponsePage,
         QrResponseFailPage,
@@ -90,7 +88,6 @@ import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-se
         ConfirmAccess,
         WalkthroughPage,
         ConfirmLogin,
-        QrReaderPage,
         PendingToRegistryPage,
         QrResponsePage,
         QrResponseFailPage,

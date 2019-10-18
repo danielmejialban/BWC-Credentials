@@ -4,10 +4,10 @@
             <h2 class="logobwc" style="color: #000;" (click)="goToRegister()">Solicitud Presentación</h2>
             <div class="qr">
                 <!--            <ion-img [src]='jwtqr'></ion-img>-->
-                <ngx-qrcode [qrc-value]="jwtPayload | json"
+                <ngx-qrcode [qrc-value]="token"
                             qrc-class="aclass"
                             qrc-errorCorrectionLevel="L"
-                            [qrc-version]="19"
+                            [qrc-version]="23"
                 (click)="openModalToServiceProvider()">
                 </ngx-qrcode>
             </div>
