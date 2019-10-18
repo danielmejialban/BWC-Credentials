@@ -25,14 +25,16 @@ export class ModalServiceProviderPage {
     console.log('ionViewDidLoad ModalServiceProviderPage');
   }
 
-  // goBack(){
-  //     // this.dismiss();
-  //     this.navCtrl.popToRoot();
-  //     console.log("ServiceProvider",this.serviceProvider);
-  // }
-
   closeModal(){
-      this.viewCtrl.dismiss({ provider: this.serviceProvider});
+      this.viewCtrl.dismiss({ provider: this.serviceProvider}).catch(reason => {
+          alert("Lo sentimos ha ocurrido un error");
+      });
+    }
+
+    btnCloseModal(){
+      this.viewCtrl.dismiss().catch( error =>{
+          alert("Lo sentimos ha ocurrido un error");
+      });
     }
 
 }

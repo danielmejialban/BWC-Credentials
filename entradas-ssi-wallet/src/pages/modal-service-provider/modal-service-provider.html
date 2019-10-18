@@ -6,12 +6,19 @@
 -->
 <ion-content padding class="transparent">
     <div class="modal_content" style="margin-top: 100px;">
-        <h6>Service Provider</h6>
-        <ion-input id="pwd" no-lines style="border-radius: 10px; border-style: solid; border-color: transparent;border-spacing: 54px; background-color: #bdbbd1ff;   border-bottom-color: transparent !important;
+        <div class="div-btn-close">
+            <button ion-button color="red" class="btn-exit" [clear]="true" (click)="btnCloseModal()">
+                <img src="assets/images/hdpi/ico-close-red.png">
+            </button>
+        </div>
+        <div class="content-provider">
+            <h6>Service Provider</h6>
+            <ion-input id="pwd" no-lines style="border-radius: 10px; border-style: solid; border-color: transparent;border-spacing: 54px; background-color: #bdbbd1ff;   border-bottom-color: transparent !important;
         box-shadow: none !important;" [(ngModel)]="serviceProvider" required placeholder="Introduzca el nombre del Provider">
-        </ion-input>
-        <button ion-button color="success" class="btn-save"  style="margin-top:10px;" (click)="closeModal()" >
-            Guardar
-        </button>
+            </ion-input>
+            <button ion-button color="success" class="btn-save"  style="margin-top:10px;" (click)="closeModal()" >
+                Guardar
+            </button>
+        </div>
     </div>
 </ion-content>
