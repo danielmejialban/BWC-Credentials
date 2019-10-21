@@ -17,7 +17,6 @@ import { TokenSigner } from 'jsontokens'
 import { decodeToken } from 'jsontokens'
 import {tick} from "@angular/core/testing";
 
-
 @IonicPage()
 @Component({
     selector: 'login',
@@ -177,22 +176,25 @@ export class Login {
 
     qrScannerCam(){
         this.barcode.scan().then(barcodeData => {
-            if (!barcodeData) {
-                alert('Error: Contacte con el service provider.')
-            } else {
-                let jwt = require("jsonwebtoken");
-                let token = jwt.decode(barcodeData.text);
-                console.log("barcodeData",barcodeData);
-                console.log("BarcodeDataText --> ",token);
-                this.decode64 = undefined;
-                this.searchJSON(token);
-                let  ticketId = this.decode64;
-                console.log("ticket--->",ticketId);
+            // console.log("BarcodeInit --->",barcodeData);
+            let jwt = require("jsontokens");
+            let token = undefined;
+            this.decode64 = undefined;
+            if (barcodeData != null || barcodeData != undefined) {
+                try {
+                    token  = jwt.decodeToken(barcodeData.text);
+                    console.log("barcodeData",barcodeData);
+                    this.searchJSON(token);
+                }catch (e) {}
                 if(this.decode64 != null && this.decode64 != undefined){
+                    console.log("Entra pantalla aceptado");
                     this.navCtrl.push(QrResponsePage, {ticketId: this.decode64});
                 }else{
+                    console.log("Entra en la pantalla rechazado");
                     this.navCtrl.push(QrResponseFailPage, {ticketId: this.decode64});
                 }
+            } else {
+                alert('Error: Contacte con el service provider.')
             }
         }).catch(err => {
             console.log('Error', err);
