@@ -15,7 +15,7 @@ import {PayLoadJwtCredential} from "../../models/jwtCredentials";
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
 import { TokenSigner } from 'jsontokens'
 import { decodeToken } from 'jsontokens'
-import {tick} from "@angular/core/testing";
+import {readFileSync} from 'fs';
 
 @IonicPage()
 @Component({
@@ -41,8 +41,7 @@ export class Login {
     ecurve = new this.elliptic.ec('secp256k1');
     test = this.genKey();
     token: any;
-    kid:any;
-
+    backendId:string='did_back_end';
 
     constructor(
         public barcodeScanner: BarcodeScanner,
@@ -55,7 +54,7 @@ export class Login {
         let keys = this.genKey();
         //TODO: recuperar un fichero.
 
-        let publicB64 = Base64.encode(keys.public1)
+        let publicB64 = Base64.encode(keys.public1);
         let base64Encoded  = Base64.encode(publicB64);
 
         console.log("Base64",base64Encoded);
@@ -93,15 +92,23 @@ export class Login {
     }
 
      genKey(){
-        var keypair = this.ecurve.genKeyPair();
-        var key = keypair.getPrivate().toString('hex');
-        var prefix = '0'.repeat(64 - key.length);
-        var public1 = keypair.getPublic().encode('hex');
+        let keypair = this.ecurve.genKeyPair();
+        let key = keypair.getPrivate().toString('hex');
+        let prefix = '0'.repeat(64 - key.length);
+        let public1 = keypair.getPublic().encode('hex');
         console.log("key privada----"+key);
         console.log("key publica----"+public1);
         return {private: `${prefix}${key}`, public1};
     }
 
+
+    getDid(token:any){
+        console.log("entra en el kid -->",token);
+      let _kid = this.testService.postValidateDid(this.backendId,token).subscribe( (data:any) =>{
+            console.log("KID --->",data);
+        }).unsubscribe();
+      return _kid;
+    }
 
     generateToken(keys:any) {
         // let token = jwt.sign(this.jwtPayload, "-----BEGIN EC PRIVATE KEY-----\n" +
@@ -112,8 +119,6 @@ export class Login {
         // localStorage.setItem('token',JSON.stringify(token));
         let tokenSigned = new this.jsontokens.TokenSigner('ES256k', keys.private).sign(this.jwtPayload,false,this.headerJwt);
         console.log("TokenSigned --> ",tokenSigned);
-        let verified = new this.jsontokens.TokenVerifier('ES256k', keys.public1).verify(tokenSigned);
-        // console.log("verifincando 333333",verified);
         return tokenSigned;
     }
 
@@ -149,10 +154,10 @@ export class Login {
             let jwt = require("jsontokens");
             let token = undefined;
             this.decode64 = undefined;
-            this.kid = undefined;
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
+                    this.getDid(token);
                     let token_aux = token;
                     console.log("KID --->",token_aux.header.kid);
                     let tokenText = new this.jsontokens.decodeToken(barcodeData.text);
@@ -191,7 +196,6 @@ export class Login {
         }
     }
 }
-
 
 
 @Component({

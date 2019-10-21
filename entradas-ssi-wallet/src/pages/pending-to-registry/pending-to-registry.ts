@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {TestService} from "../../services/test.service";
+import {TestService} from "../../services/verifiable-credential.service";
 import {Provider} from "../../models/User";
 
 /**

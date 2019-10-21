@@ -34,7 +34,7 @@ import {RegisterPrivacyConditionsPageModule} from "../pages/register/register-hu
 import {SideBarComponent} from "../components/side-bar/side-bar";
 import {QRScanner} from "@ionic-native/qr-scanner/ngx";
 import {PendingToRegistryPage} from "../pages/pending-to-registry/pending-to-registry";
-import {TestService} from "../services/test.service";
+import {TestService} from "../services/verifiable-credential.service";
 import {QrResponsePage} from "../pages/qr-response/qr-response";
 import {QrResponsePageModule} from "../pages/qr-response/qr-response.module";
 import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
