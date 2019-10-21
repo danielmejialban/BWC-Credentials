@@ -5,6 +5,7 @@
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -60,4 +61,6 @@
     <plugin name="cordova-plugin-fingerprint-aio" spec="1.5.0" />
     <allow-navigation href="http://192.168.1.109:8100" />
     <engine name="browser" spec="5.0.4" />
+    <plugin name="cordova-plugin-secure-storage" spec="^2.6.8" />
+    <engine name="ios" spec="~4.4.0" />
 </widget>
