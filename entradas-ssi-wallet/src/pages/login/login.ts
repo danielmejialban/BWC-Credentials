@@ -5,7 +5,7 @@ import { ContructionsPage } from '../contructions/contructions';
 import { SessionSecuredStorageService } from '../../services/securedStorage.service';
 import { HomePage } from '../home/home';
 import {RegisterPrivacyConditionsPage} from "../register/register-hub/register-privacy-conditions/register-privacy-conditions";
-import {TestService} from "../../services/test.service";
+import {TestService} from "../../services/verifiable-credential.service";
 import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
 import {Base64} from "js-base64";
@@ -41,6 +41,7 @@ export class Login {
     ecurve = new this.elliptic.ec('secp256k1');
     test = this.genKey();
     token: any;
+    kid:any;
 
 
     constructor(
@@ -52,6 +53,7 @@ export class Login {
         private barcode: BarcodeScanner,) {
 
         let keys = this.genKey();
+        //TODO: recuperar un fichero.
 
         let publicB64 = Base64.encode(keys.public1)
         let base64Encoded  = Base64.encode(publicB64);
@@ -141,51 +143,25 @@ export class Login {
         modal.present();
     }
 
-    // opneQr(){
-    //     this.navCtrl.push(QrReaderPage);
-    //     console.log("Ok!");
-    //     this.testService.getUID();
-    // }
-
-
-    // qrScannerCam() {
-    //     this.barcode.scan().then(barcodeData => {
-    //         if (!barcodeData) {
-    //             alert('Error: Contacte con el service provider.')
-    //         } else {
-    //             console.log("barCode", barcodeData.text);
-    //             let jwt = require("jsonwebtoken");
-    //             let token = jwt.decode(barcodeData.text);
-    //             console.log("token decoded", token);
-    //             let saveToken: PayLoadJwtCredential = token;
-    //             this.decode64 = Base64.decode(saveToken.vp.verifiableCredential);
-    //             let ticketId = this.decode64;
-    //             let name = saveToken.name;
-    //             let email = saveToken.email;
-    //
-    //             if (saveToken.vp != null && !undefined) {
-    //                 this.navCtrl.push(QrResponsePage, {ticketId: ticketId, name:name, email:email});
-    //             } else{
-    //                 this.navCtrl.push(QrResponseFailPage, {ticketId: ticketId, name:name,email:email});
-    //             }
-    //         }
-    //     }).catch(err => {
-    //         console.log('Error', err);
-    //     });
-    // }
-
     qrScannerCam(){
         this.barcode.scan().then(barcodeData => {
             // console.log("BarcodeInit --->",barcodeData);
             let jwt = require("jsontokens");
             let token = undefined;
             this.decode64 = undefined;
+            this.kid = undefined;
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
-                    console.log("barcodeData",barcodeData);
+                    let token_aux = token;
+                    console.log("KID --->",token_aux.header.kid);
+                    let tokenText = new this.jsontokens.decodeToken(barcodeData.text);
+                    console.log("KID JSONTOKENS---->",tokenText.header.kid);
+                    console.log("barcodeData",token);
                     this.searchJSON(token);
-                }catch (e) {}
+                }catch (e) {
+                    console.log("error",e);
+                }
                 if(this.decode64 != null && this.decode64 != undefined){
                     console.log("Entra pantalla aceptado");
                     this.navCtrl.push(QrResponsePage, {ticketId: this.decode64});
