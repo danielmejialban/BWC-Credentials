@@ -79,7 +79,7 @@
   "devDependencies": {
     "@ionic/app-scripts": "3.2.3",
     "node-hot-loader": "^1.17.6",
-    "typescript": "2.4.0",
+    "typescript": "3.1.6",
     "webpack": "^4.41.2"
   },
   "cordovaPlugins": [

@@ -8,8 +8,7 @@ import {RegisterPrivacyConditionsPage} from "../register/register-hub/register-p
 import {TestService} from "../../services/verifiable-credential.service";
 import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
-import {Base64} from "js-base64";
-import {User} from "../../models/User";
+import {Base64} from 'js-base64';
 import {clearScreenDown} from "readline";
 import {PayLoadJwtCredential} from "../../models/jwtCredentials";
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
@@ -32,7 +31,6 @@ export class Login {
     jwtPayload: any;
     headerJwt;
     multiScanner: boolean = false;
-    user: User;
     serviceProvider: string;
     date: Date = new Date();
     expDate: Date = new Date();
