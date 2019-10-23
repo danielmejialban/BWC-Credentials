@@ -1,4 +1,4 @@
-<ion-menu persistent="true" [content]="content" type="overlay">
+<ion-menu persistent="true" [content]="content" type="overlay" >
     <ion-header class="black_menu">
         <button>
             <ion-icon name="menu"></ion-icon>
@@ -6,11 +6,11 @@
     </ion-header>
     <ion-content class="black_menu">
         <ion-list class="login-menu">
-            <button ion-item (click)="openPage('login')">
-                <div item-start><img src="assets/images/hdpi/ico-02.png"></div>Inicio
+            <button ion-item (click)="openPage('login')"  menuClose>
+                <div item-start><img src="assets/images/hdpi/ico-02.png"></div>Start
             </button>
-            <button ion-item (click)="openPage('pendingToRegister')">
-                <div item-start><img src="assets/images/hdpi/ico-03.png"></div>Accesos no registrados
+            <button ion-item (click)="comingSoon()" menuClose>
+                <div item-start><img src="assets/images/hdpi/ico-03.png"></div>Pending access
             </button>
 <!--            <button ion-item (click)="openPage('login')">-->
 <!--                <div item-start><ion-icon name="cloud-upload"></ion-icon></div>Accesos no registrados-->
@@ -24,23 +24,22 @@
 <!--            <button ion-item (click)="openPage('legal')">-->
 <!--                <div item-start><ion-icon name="paper"></ion-icon></div>Aviso legal-->
 <!--            </button>-->
-            <button ion-item (click)="openPage('exit')">
-                <div item-start><img src="assets/images/hdpi/ico-07.png"></div>Salir
+            <button ion-item (click)="exitApp()" menuClose>
+                <div item-start><img src="assets/images/hdpi/ico-07.png"></div>Exit
             </button>
         </ion-list>
-        <label class="version-info white_color">Versión AlastriaID 1.1</label>
+        <label class="version-info white_color">Version AlastriaID 1.1</label>
     </ion-content>
 </ion-menu>
 
 <ion-navbar [hideBackButton]="true"  class="nav-bar-custom">
     <div class="button-container">
         <ion-title>
-            <img  class="img-header" src="assets/images/hdpi/Header-background.png"/>
+            <img  class="img-header" src="assets/images/hdpi/Header2-background.png"/>
             <img  class="img-header-logos" src="assets/images/hdpi/Header-logos.png"/>
         </ion-title>
     </div>
     <button class="btn-side-bar" #content ion-button menuToggle clear icon-start>
-        <!--        <ion-icon src="assets/images/hdpi/Header-iconW.png"></ion-icon>-->
         <img clas="img-button-icon" src="assets/images/hdpi/Header-iconW.png"/>
     </button>
 </ion-navbar>

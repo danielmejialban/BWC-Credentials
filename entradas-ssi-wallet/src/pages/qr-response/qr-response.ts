@@ -45,7 +45,7 @@ export class QrResponsePage {
   }
 
     goScanner(){
-        this.navCtrl.popToRoot();
+        this.navCtrl.popTo(Login);
     }
 
 

@@ -33,7 +33,7 @@ export class QrResponseFailPage {
   }
 
   goScanner(){
-      this.navCtrl.popToRoot();
+      this.navCtrl.popTo(Login);
   }
 
 }

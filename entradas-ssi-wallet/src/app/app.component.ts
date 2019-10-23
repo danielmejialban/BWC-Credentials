@@ -15,16 +15,11 @@ import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-se
 export class MyApp {
     rootPage: any = ModalServiceProviderPage;
     @ViewChild(Nav) nav: Nav;
+    platform: any;
 
-    constructor(platform: Platform,
-                statusBar: StatusBar,
-                splashScreen: SplashScreen,
-                app: App) {
+    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, app: App) {
         console.log("[Debug] App enter");
-        platform.registerBackButtonAction(() =>{
-            console.log("Saliendo...");
-            platform.exitApp();
-        },100)
+        this.platform = platform;
     }
 
     openPage(page: string){
@@ -36,9 +31,18 @@ export class MyApp {
                 this.nav.push(QrResponsePage);
                 break;
             case 'login':
-                this.nav.popToRoot();
+                this.nav.push(Login);
                 break;
         }
+    }
+
+    exitApp(){
+        console.log("cerrando App...");
+        this.platform.exitApp();
+    }
+
+    comingSoon(){
+        alert("Coming Soon...");
     }
 }
 

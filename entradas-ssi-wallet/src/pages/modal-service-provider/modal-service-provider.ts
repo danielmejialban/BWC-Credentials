@@ -36,10 +36,6 @@ export class ModalServiceProviderPage {
     }
 
     btnCloseModal(){
-      this.viewCtrl.dismiss().catch( error =>{
-          alert("Lo sentimos ha ocurrido un error");
-          console.log(error);
-      });
+        this.navCtrl.push(Login);
     }
-
 }

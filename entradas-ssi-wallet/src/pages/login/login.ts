@@ -3,18 +3,15 @@ import { IonicPage, ModalController, ViewController, NavParams, NavController } 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { ContructionsPage } from '../contructions/contructions';
 import { SessionSecuredStorageService } from '../../services/securedStorage.service';
-import { HomePage } from '../home/home';
-import {RegisterPrivacyConditionsPage} from "../register/register-hub/register-privacy-conditions/register-privacy-conditions";
 import {TestService} from "../../services/verifiable-credential.service";
 import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
 import {Base64} from 'js-base64';
-import {clearScreenDown} from "readline";
-import {PayLoadJwtCredential} from "../../models/jwtCredentials";
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
 import { TokenSigner } from 'jsontokens'
 import { decodeToken } from 'jsontokens'
 import {readFileSync} from 'fs';
+import {createHash} from "crypto";
 
 @IonicPage()
 @Component({
@@ -49,12 +46,11 @@ export class Login {
         private testService: TestService,
         private barcode: BarcodeScanner,) {
 
+        let url = "https://www.in2.es/blockchain2/";
+        let hashCode = "be77731ad14a77dd71ddee69c4350f3b";
         let keys = this.genKey();
-        //TODO: recuperar un fichero.
-
         let publicB64 = Base64.encode(keys.public1);
         let base64Encoded  = Base64.encode(publicB64);
-
         console.log("Base64",base64Encoded);
         localStorage.setItem('base64',base64Encoded);
         let getProvider = localStorage.getItem('provider');
@@ -76,21 +72,22 @@ export class Login {
                     "JWT"
                 ],
                 "type": ["VerifiablePresentationRequest", "AlastriaVPRTicket"],
-                "procUrl": "https://www.direccion_evento.com/alastria/businessprocess/0001",
-                "procHash": "H398sjHd...kldjUYn475n",
+                "procUrl": url,
+                "procHash": hashCode,
                 "data": [
                     {
                         "@context": "JWT",
                         "levelOfAssurance": "Low",
                         "required": true,
-                        "field_name": "ticketID",
-                        "provider": providerParse
+                        "provider": providerParse,
+                        "field_name": "ticketID"
                     }
                 ],
             }
         };
 
         this.token = this.generateToken(keys);
+        console.log(this.token);
     }
 
      genKey(){
