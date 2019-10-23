@@ -148,13 +148,14 @@ export class Login {
 
     qrScannerCam(){
         this.barcode.scan().then(barcodeData => {
-            // console.log("BarcodeInit --->",barcodeData);
+            console.log("BarcodeInit --->",barcodeData);
             let jwt = require("jsontokens");
             let token = undefined;
             this.decode64 = undefined;
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
+                    console.log("Token recibido",token);
                     this.getDid(token);
                     let token_aux = token;
                     console.log("KID --->",token_aux.header.kid);
@@ -169,6 +170,7 @@ export class Login {
                     console.log("Entra pantalla aceptado");
                     this.navCtrl.push(QrResponsePage, {ticketId: this.decode64});
                 }else{
+                    console.log("--- token ---",token);
                     console.log("Entra en la pantalla rechazado");
                     this.navCtrl.push(QrResponseFailPage, {ticketId: this.decode64});
                 }
@@ -184,8 +186,8 @@ export class Login {
         for (let k in data) {
             if (typeof data[k] == "object" && data[k] !== null) {
                 if (k == 'verifiableCredential') {
-                    this.decode64 = Base64.decode(data[k]);
-                    console.log("---",this.decode64);
+                    this.decode64 = data[k];
+                    console.log("---DECODE64---",this.decode64);
                 }
                 else{
                     this.searchJSON(data[k]);
