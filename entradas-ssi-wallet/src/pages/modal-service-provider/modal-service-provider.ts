@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
 import {Provider} from "../../models/User";
+import {Login} from "../login/login";
 
 /**
  * Generated class for the ModalServiceProviderPage page.
@@ -26,14 +27,18 @@ export class ModalServiceProviderPage {
   }
 
   closeModal(){
-      this.viewCtrl.dismiss({ provider: this.serviceProvider}).catch(reason => {
-          alert("Lo sentimos ha ocurrido un error");
-      });
+      // this.viewCtrl.dismiss({ provider: this.serviceProvider}).catch(reason => {
+      //     alert("Lo sentimos ha ocurrido un error");
+      //     console.log(reason);
+      // });
+      localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
+      this.navCtrl.push(Login);
     }
 
     btnCloseModal(){
       this.viewCtrl.dismiss().catch( error =>{
           alert("Lo sentimos ha ocurrido un error");
+          console.log(error);
       });
     }
 

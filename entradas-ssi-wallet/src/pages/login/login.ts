@@ -57,7 +57,10 @@ export class Login {
 
         console.log("Base64",base64Encoded);
         localStorage.setItem('base64',base64Encoded);
-
+        let getProvider = localStorage.getItem('provider');
+        console.log("Provider",getProvider);
+        let providerParse = JSON.parse(getProvider);
+        console.log(JSON.parse(getProvider));
         this.headerJwt = {
             kid: "did:ala:quor:redt:" + base64Encoded + "#keys-1",
             typ: "JWT",
@@ -81,6 +84,7 @@ export class Login {
                         "levelOfAssurance": "Low",
                         "required": true,
                         "field_name": "ticketID",
+                        "provider": providerParse
                     }
                 ],
             }
@@ -138,11 +142,11 @@ export class Login {
 
     openModalToServiceProvider(){
         const modal = this.modalCtrl.create(ModalServiceProviderPage);
-        modal.onDidDismiss( data =>{
-            this.serviceProvider = data;
-            console.log(this.serviceProvider);
-            localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
-        });
+        // modal.onDidDismiss( data =>{
+        //     this.serviceProvider = data;
+        //     console.log(this.serviceProvider);
+        //     localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
+        // });
         modal.present();
     }
 
