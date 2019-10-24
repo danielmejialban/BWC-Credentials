@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IonicPage, ModalController, ViewController, NavParams, NavController } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { SessionSecuredStorageService } from '../../services/securedStorage.service';
 import {TestService} from "../../services/verifiable-credential.service";
 import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
@@ -9,8 +8,7 @@ import {Base64} from 'js-base64';
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
 import { TokenSigner } from 'jsontokens'
 import { decodeToken } from 'jsontokens'
-import {readFileSync} from 'fs';
-import {createHash} from "crypto";
+
 
 @IonicPage()
 @Component({
@@ -40,7 +38,6 @@ export class Login {
         public barcodeScanner: BarcodeScanner,
         public navCtrl: NavController,
         public modalCtrl: ModalController,
-        public sessionSecuredStorageService: SessionSecuredStorageService,
         private testService: TestService,
         private barcode: BarcodeScanner,) {
 
@@ -116,11 +113,6 @@ export class Login {
         modal.present();
     }
 
-    // navegateTo(text: string) {
-    //     let modal = this.modalCtrl.create(ContructionsPage);
-    //     modal.present();
-    //     console.log('Navigating to page: ' + text);
-    // }
 
     goToRegister() {
         this.navCtrl.push(ModalServiceProviderPage);
@@ -129,11 +121,6 @@ export class Login {
 
     openModalToServiceProvider(){
         const modal = this.modalCtrl.create(ModalServiceProviderPage);
-        // modal.onDidDismiss( data =>{
-        //     this.serviceProvider = data;
-        //     console.log(this.serviceProvider);
-        //     localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
-        // });
         modal.present();
     }
 

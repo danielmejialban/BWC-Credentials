@@ -1,7 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {App, Nav, Platform} from 'ionic-angular';
-import {StatusBar} from '@ionic-native/status-bar';
-import {SplashScreen} from '@ionic-native/splash-screen';
+import {Nav, Platform} from 'ionic-angular';
 import {PendingToRegistryPage} from "../pages/pending-to-registry/pending-to-registry";
 import {QrResponsePage} from "../pages/qr-response/qr-response";
 import {Login} from "../pages/login/login";
@@ -15,7 +13,7 @@ export class MyApp {
     @ViewChild(Nav) nav: Nav;
     platform: any;
 
-    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, app: App) {
+    constructor(platform: Platform) {
         console.log("[Debug] App enter");
         this.platform = platform;
     }

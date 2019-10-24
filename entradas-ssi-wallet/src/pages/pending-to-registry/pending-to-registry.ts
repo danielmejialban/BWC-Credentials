@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {TestService} from "../../services/verifiable-credential.service";
-import {Provider} from "../../models/User";
 
 /**
  * Generated class for the PendingToRegistryPage page.
