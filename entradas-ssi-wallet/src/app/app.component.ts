@@ -1,12 +1,10 @@
 import {Component, ViewChild} from '@angular/core';
-import {Platform, App, Nav} from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { HomePage } from '../pages/home/home';
+import {App, Nav, Platform} from 'ionic-angular';
+import {StatusBar} from '@ionic-native/status-bar';
+import {SplashScreen} from '@ionic-native/splash-screen';
 import {PendingToRegistryPage} from "../pages/pending-to-registry/pending-to-registry";
 import {QrResponsePage} from "../pages/qr-response/qr-response";
 import {Login} from "../pages/login/login";
-import {platform} from "os";
 import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-service-provider";
 
 @Component({

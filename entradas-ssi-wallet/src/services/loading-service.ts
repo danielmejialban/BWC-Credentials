@@ -1,6 +1,5 @@
 import { LoadingController, Modal, ModalController } from 'ionic-angular';
 import { Injectable } from '@angular/core';
-import { SuccessPage } from '../pages/success/success';
 
 @Injectable()
 export class LoadingService {
@@ -37,14 +36,14 @@ export class LoadingService {
         let imgSuccess = '';
         let page = "loading";
 
-        this.loadingModal = this.modalCtrl.create(SuccessPage, {
-            titleSuccess: titleSuccess,
-            textSuccess: textSuccess,
-            imgPrincipal: imgPrincipal,
-            imgSuccess: imgSuccess,
-            page: page,
-            callback: "success"
-        });
+        // this.loadingModal = this.modalCtrl.create(SuccessPage, {
+        //     titleSuccess: titleSuccess,
+        //     textSuccess: textSuccess,
+        //     imgPrincipal: imgPrincipal,
+        //     imgSuccess: imgSuccess,
+        //     page: page,
+        //     callback: "success"
+        // });
         this.currentModalState = State.LOADING;
         this.loadingTimer = new Promise((resolve) => {
             setTimeout(() => {
@@ -72,18 +71,18 @@ export class LoadingService {
         let imgSuccess = 'assets/images/tabIcon/act.png';
         let page = "success";
 
-        let succesModal = this.modalCtrl.create(SuccessPage, {
-            titleSuccess: titleSuccess,
-            textSuccess: textSuccess,
-            imgPrincipal: imgPrincipal,
-            imgSuccess: imgSuccess,
-            page: page,
-            callback: ""
-        });
-        this.currentModalState = State.SUCCESS;
-        succesModal.present();
-        this.loadingModal.dismiss();
-        this.loadingModal = succesModal;
+        // let succesModal = this.modalCtrl.create(SuccessPage, {
+        //     titleSuccess: titleSuccess,
+        //     textSuccess: textSuccess,
+        //     imgPrincipal: imgPrincipal,
+        //     imgSuccess: imgSuccess,
+        //     page: page,
+        //     callback: ""
+        // });
+        // this.currentModalState = State.SUCCESS;
+        // succesModal.present();
+        // this.loadingModal.dismiss();
+        // this.loadingModal = succesModal;
     }
 }
 
