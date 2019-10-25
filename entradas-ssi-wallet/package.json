@@ -43,7 +43,6 @@
     "cordova-ios": "^4.4.0",
     "cordova-plugin-add-swift-support": "^1.7.2",
     "cordova-plugin-compat": "1.2.0",
-    "cordova-plugin-console": "^1.1.0",
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-fingerprint-aio": "^1.5.0",
     "cordova-plugin-flashlight": "^3.2.0",
@@ -106,7 +105,6 @@
       "cordova-plugin-spinner-dialog": {},
       "cordova-plugin-vibration": {},
       "cordova-plugin-x-toast": {},
-      "cordova-plugin-console": {},
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },

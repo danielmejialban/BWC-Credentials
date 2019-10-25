@@ -1,20 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { IonicPage, ModalController, ViewController, NavParams, NavController } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { ContructionsPage } from '../contructions/contructions';
-import { SessionSecuredStorageService } from '../../services/securedStorage.service';
-import { HomePage } from '../home/home';
-import {RegisterPrivacyConditionsPage} from "../register/register-hub/register-privacy-conditions/register-privacy-conditions";
 import {TestService} from "../../services/verifiable-credential.service";
 import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
 import {Base64} from 'js-base64';
-import {clearScreenDown} from "readline";
-import {PayLoadJwtCredential} from "../../models/jwtCredentials";
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
-import { TokenSigner } from 'jsontokens'
-import { decodeToken } from 'jsontokens'
-import {readFileSync} from 'fs';
 
 @IonicPage()
 @Component({
@@ -30,7 +21,6 @@ export class Login {
     pass: string;
     jwtPayload: any;
     headerJwt;
-    multiScanner: boolean = false;
     serviceProvider: string;
     date: Date = new Date();
     expDate: Date = new Date();
@@ -40,24 +30,23 @@ export class Login {
     test = this.genKey();
     token: any;
     backendId:string='did_back_end';
+    _isMultiScanner:boolean;
 
     constructor(
         public barcodeScanner: BarcodeScanner,
         public navCtrl: NavController,
         public modalCtrl: ModalController,
-        public sessionSecuredStorageService: SessionSecuredStorageService,
         private testService: TestService,
         private barcode: BarcodeScanner,) {
 
+        let url = "https://www.in2.es/blockchain2/";
+        let hashCode = "be77731ad14a77dd71ddee69c4350f3b";
         let keys = this.genKey();
-        //TODO: recuperar un fichero.
-
         let publicB64 = Base64.encode(keys.public1);
         let base64Encoded  = Base64.encode(publicB64);
-
-        console.log("Base64",base64Encoded);
         localStorage.setItem('base64',base64Encoded);
-
+        let getProvider = localStorage.getItem('provider');
+        let providerParse = JSON.parse(getProvider);
         this.headerJwt = {
             kid: "did:ala:quor:redt:" + base64Encoded + "#keys-1",
             typ: "JWT",
@@ -73,20 +62,22 @@ export class Login {
                     "JWT"
                 ],
                 "type": ["VerifiablePresentationRequest", "AlastriaVPRTicket"],
-                "procUrl": "https://www.direccion_evento.com/alastria/businessprocess/0001",
-                "procHash": "H398sjHd...kldjUYn475n",
+                "procUrl": url,
+                "procHash": hashCode,
                 "data": [
                     {
                         "@context": "JWT",
                         "levelOfAssurance": "Low",
                         "required": true,
-                        "field_name": "ticketID",
+                        "provider": providerParse,
+                        "field_name": "ticketID"
                     }
                 ],
             }
         };
 
         this.token = this.generateToken(keys);
+        console.log(this.token);
     }
 
      genKey(){
@@ -94,16 +85,12 @@ export class Login {
         let key = keypair.getPrivate().toString('hex');
         let prefix = '0'.repeat(64 - key.length);
         let public1 = keypair.getPublic().encode('hex');
-        console.log("key privada----"+key);
-        console.log("key publica----"+public1);
         return {private: `${prefix}${key}`, public1};
     }
 
 
     getDid(token:any){
-        console.log("entra en el kid -->",token);
       let _kid = this.testService.postValidateDid(this.backendId,token).subscribe( (data:any) =>{
-            console.log("KID --->",data);
         }).unsubscribe();
       return _kid;
     }
@@ -116,7 +103,6 @@ export class Login {
         //     "-----END EC PRIVATE KEY-----", {header: this.headerJwt, algorithm: "ES256"});
         // localStorage.setItem('token',JSON.stringify(token));
         let tokenSigned = new this.jsontokens.TokenSigner('ES256k', keys.private).sign(this.jwtPayload,false,this.headerJwt);
-        console.log("TokenSigned --> ",tokenSigned);
         return tokenSigned;
     }
 
@@ -125,11 +111,6 @@ export class Login {
         modal.present();
     }
 
-    navegateTo(text: string) {
-        let modal = this.modalCtrl.create(ContructionsPage);
-        modal.present();
-        console.log('Navigating to page: ' + text);
-    }
 
     goToRegister() {
         this.navCtrl.push(ModalServiceProviderPage);
@@ -138,17 +119,11 @@ export class Login {
 
     openModalToServiceProvider(){
         const modal = this.modalCtrl.create(ModalServiceProviderPage);
-        modal.onDidDismiss( data =>{
-            this.serviceProvider = data;
-            console.log(this.serviceProvider);
-            localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
-        });
         modal.present();
     }
 
     qrScannerCam(){
         this.barcode.scan().then(barcodeData => {
-            // console.log("BarcodeInit --->",barcodeData);
             let jwt = require("jsontokens");
             let token = undefined;
             this.decode64 = undefined;
@@ -156,21 +131,14 @@ export class Login {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
                     this.getDid(token);
-                    let token_aux = token;
-                    console.log("KID --->",token_aux.header.kid);
-                    let tokenText = new this.jsontokens.decodeToken(barcodeData.text);
-                    console.log("KID JSONTOKENS---->",tokenText.header.kid);
-                    console.log("barcodeData",token);
                     this.searchJSON(token);
                 }catch (e) {
                     console.log("error",e);
                 }
                 if(this.decode64 != null && this.decode64 != undefined){
-                    console.log("Entra pantalla aceptado");
-                    this.navCtrl.push(QrResponsePage, {ticketId: this.decode64});
+                    this.navCtrl.push(QrResponsePage, {multiScanner: this._isMultiScanner});
                 }else{
-                    console.log("Entra en la pantalla rechazado");
-                    this.navCtrl.push(QrResponseFailPage, {ticketId: this.decode64});
+                    this.navCtrl.push(QrResponseFailPage, {multiScanner: this._isMultiScanner});
                 }
             } else {
                 alert('Error: Contacte con el service provider.')
@@ -184,14 +152,18 @@ export class Login {
         for (let k in data) {
             if (typeof data[k] == "object" && data[k] !== null) {
                 if (k == 'verifiableCredential') {
-                    this.decode64 = Base64.decode(data[k]);
-                    console.log("---",this.decode64);
+                    this.decode64 = data[k];
                 }
                 else{
                     this.searchJSON(data[k]);
                 }
             }
         }
+    }
+
+    multiScanner(event:any){
+        this._isMultiScanner = event;
+        console.log("Event antes de enviarse",event);
     }
 }
 

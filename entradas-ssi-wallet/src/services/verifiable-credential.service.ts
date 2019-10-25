@@ -10,13 +10,6 @@ export class TestService{
     constructor(private _http: HttpClient) {}
 
     getUID(){
-        let test = {
-            "did":"345",
-            "email":"daniel.alban@in2.es",
-            "nombre":"Daniel",
-            "apellido": "Albán",
-            "ticketId":"t-00007251"
-        };
         this._http.post(`${this.pro}`+"/v1/credential/",{ "did":"345",
             "email":"daniel.alban@in2.es",
             "nombre":"Daniel",

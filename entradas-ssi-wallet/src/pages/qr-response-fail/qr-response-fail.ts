@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Login} from "../login/login";
-import {errorHandler} from "@angular/platform-browser/src/browser";
 
 /**
  * Generated class for the QrResponseFailPage page.
@@ -16,13 +15,15 @@ import {errorHandler} from "@angular/platform-browser/src/browser";
   templateUrl: 'qr-response-fail.html',
 })
 export class QrResponseFailPage {
-
-
     ticket: string;
     name: string;
     email: string;
+    _isMultiScanner: boolean;
+    login: Login;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this._isMultiScanner =  this.navParams.get('multiScanner');
+      console.log("IsMultiScannerValue---->",this._isMultiScanner);
   }
 
   ionViewDidLoad() {
@@ -33,7 +34,11 @@ export class QrResponseFailPage {
   }
 
   goScanner(){
-      this.navCtrl.popToRoot();
+      if (this._isMultiScanner){
+          this.login.qrScannerCam();
+      }else {
+          this.navCtrl.popTo(Login);
+      }
   }
 
 }
