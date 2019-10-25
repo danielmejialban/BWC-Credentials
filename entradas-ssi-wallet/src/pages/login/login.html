@@ -30,7 +30,7 @@
             <div class="scanner">
                 <div class="switch-multi">
                     <ion-label>Multi Scanner</ion-label>
-                    <ion-toggle checked="false" (ionChange)="multiScanner($event)"></ion-toggle>
+                    <ion-toggle checked="false" (ionChange)="multiScanner($event._value)"></ion-toggle>
                 </div>
                 <div class="btn-scanner">
                         <button ion-button color="success" (click)="qrScannerCam()">

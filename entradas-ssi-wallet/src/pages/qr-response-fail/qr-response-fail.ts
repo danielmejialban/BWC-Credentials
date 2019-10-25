@@ -15,13 +15,15 @@ import {Login} from "../login/login";
   templateUrl: 'qr-response-fail.html',
 })
 export class QrResponseFailPage {
-
-
     ticket: string;
     name: string;
     email: string;
+    _isMultiScanner: boolean;
+    login: Login;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this._isMultiScanner =  this.navParams.get('multiScanner');
+      console.log("IsMultiScannerValue---->",this._isMultiScanner);
   }
 
   ionViewDidLoad() {
@@ -32,7 +34,11 @@ export class QrResponseFailPage {
   }
 
   goScanner(){
-      this.navCtrl.popTo(Login);
+      if (this._isMultiScanner){
+          this.login.qrScannerCam();
+      }else {
+          this.navCtrl.popTo(Login);
+      }
   }
 
 }

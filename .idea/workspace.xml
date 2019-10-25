@@ -1,469 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a94a106-88b9-4e85-b3d5-d310d34899c8" name="Default Changelist" comment="ADD: provider name to payload to generate correctly the credential presentation qr.">
+    <list default="true" id="3a94a106-88b9-4e85-b3d5-d310d34899c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-hdpi-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-ldpi-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-mdpi-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-xhdpi-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-xxhdpi-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-xxxhdpi-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/icon.png.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-1024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-40@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-40@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-50@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-60@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-60@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-72@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-76@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-83.5@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-small.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-small@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-small@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-568h@2x~iphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-667h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-736h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-Landscape-736h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-Landscape@2x~ipad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-Landscape@~ipadpro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-Landscape~ipad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-Portrait@2x~ipad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-Portrait@~ipadpro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-Portrait~ipad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default@2x~iphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default@2x~universal~anyany.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default~iphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/splash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/resources/splash.png.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/icon/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/icon/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/arrowForward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/basicos.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/estudios.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/finanzas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/ic_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/index_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/index_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/index_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/loading.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/logoLetra.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/more.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/salud.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/slide1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/slide2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/slide3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/slide4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/startEmpty.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/startFull.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/alastria/underConstruction.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/avatar/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background-small/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background-small/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background-small/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background-small/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background-small/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background-small/network-background-vector-19712134.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/14-a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/background/bg-image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bend/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/bluetown/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/brogan/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/caledonia/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairacres/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fairhaven/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/fredericktown/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/madrid/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/nutrioso/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/gallery/qr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/jwtQr.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo-in2/logo_in2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/BiometricFinger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/logo-cinesa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/logo-samelan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/logo-samelan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/logo-univ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/logo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/logoIco.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/pass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/logo/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/splashscreen/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/splashscreen/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/splashscreen/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/tabIcon/QR READ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/tabIcon/act.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/tabIcon/act_sel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/tabIcon/bell.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/tabIcon/bell_sel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/tabIcon/house.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/tabIcon/house_sel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/images/tabIcon/more.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/audio.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/ball-triangle.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/bars.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/bullhorn.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/circles.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/edit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/flame.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/grid.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/hamburguer-menu.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/hearts.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/info.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/oval.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/puff.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/tail-spin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/three-dots.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/user-settings.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/assets/svg/user.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/expandable-list/expandable-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/expandable-list/expandable-list.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/expandable-list/expandable-list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/expandable-list/expandable-list.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/identity-data-list/identity-data-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/identity-data-list/identity-data-list.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/identity-data-list/identity-data-list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/identity-data-list/identity-data-list.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/parallax/parallax-layout-1.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/parallax/parallax-layout-1.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/parallax/parallax-layout-1.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/parallax/parallax.directive.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/parallax/parallax.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/tabs/tabs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/tabs/tabs.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/tabs/tabs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/tabs/tabs.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/user-info-header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/user-info-header.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/user-info-header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/user-info-header.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/userSettings/user-settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/userSettings/user-settings.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/userSettings/user-settings.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/userSettings/user-settings.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/confirm-access/confirm-access.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/confirm-access/confirm-access.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/confirm-access/confirm-access.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/confirm-access/confirm-access.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/confirmLogin/confirmLogin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/confirmLogin/confirmLogin.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/confirmLogin/confirmLogin.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/confirmLogin/confirmLogin.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/contructions/contructions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/contructions/contructions.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/contructions/contructions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/contructions/contructions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/detail-profile/detail-profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/detail-profile/detail-profile.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/detail-profile/detail-profile.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/detail-profile/detail-profile.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/home/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/home/home.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/home/home.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/hola.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/profile/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/profile/profile.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/profile/profile.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/profile/profile.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-form/register-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-form/register-form.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-form/register-form.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-form/register-form.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-hub.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-hub.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-hub.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-privacy-conditions/register-privacy-conditions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-privacy-conditions/register-privacy-conditions.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-privacy-conditions/register-privacy-conditions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/register/register-hub/register-privacy-conditions/register-privacy-conditions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/success/success.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/success/success.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/success/success.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/success/success.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/activity/activity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/activity/activity.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/activity/activity.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/activity/activity.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/activity/options/options.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/activity/options/options.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/activity/options/options.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/activity/options/options.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/camera/camera.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/camera/camera.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/camera/camera.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/camera/camera.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/index/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/index/index.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/index/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/index/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/notification/notification.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/notification/notification.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/notification/notification.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/notification/notification.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/options/options.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/options/options.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/options/options.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/options/options.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/tabsPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/tabsPage.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/tabsPage.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/tabsPage/tabsPage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/terms-conditions/terms-conditions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/terms-conditions/terms-conditions.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/terms-conditions/terms-conditions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/terms-conditions/terms-conditions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/walkthrough/walkthrough.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/walkthrough/walkthrough.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/walkthrough/walkthrough.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/walkthrough/walkthrough.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/privateKey.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/publicKey.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/services/activities/activities.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/services/loading-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/services/loading-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -478,74 +24,70 @@
     <favorites_list name="BWC-Credentials" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/loading-service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#74#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.48557398">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2261">
+                  <caret line="140" column="93" selection-start-line="140" selection-start-column="93" selection-end-line="140" selection-end-column="93" />
+                  <folding>
+                    <element signature="e#0#49#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/config.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="731">
+                  <caret line="43" selection-start-line="43" selection-end-line="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="637">
+                  <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -578,36 +120,39 @@
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-reader/qr-reader.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/PEM/hola.txt" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/node_modules/@angular/compiler-cli/src/transformers/program.js" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/modal-service-provider/modal-service-provider.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.html" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.html" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/modal-service-provider/modal-service-provider.html" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/config.xml" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/platforms/android/app/src/main/assets/www/index.html" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/platforms/browser/www/index.html" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/www/index.html" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.html" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/home/home.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/index.html" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/components/expandable-list/expandable-list.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/components/identity-data-list/identity-data-list.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.module.ts" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/services/loading-service.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/modal-service-provider/modal-service-provider.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.scss" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.scss" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/config.xml" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="5" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-1847" />
+    <option name="y" value="140" />
+    <option name="width" value="1440" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -615,7 +160,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -639,12 +183,13 @@
               <item name="BWC-Credentials" type="462c0819:PsiDirectoryNode" />
               <item name="entradas-ssi-wallet" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -713,7 +258,9 @@
       <workItem from="1571821773418" duration="6791000" />
       <workItem from="1571829397450" duration="12341000" />
       <workItem from="1571898824868" duration="8747000" />
-      <workItem from="1571921583299" duration="3077000" />
+      <workItem from="1571921583299" duration="8749000" />
+      <workItem from="1571950174814" duration="594000" />
+      <workItem from="1571985303842" duration="2125000" />
     </task>
     <task id="LOCAL-00001" summary="CHANGE: QR reader.">
       <created>1571311984668</created>
@@ -806,17 +353,31 @@
       <option name="project" value="LOCAL" />
       <updated>1571840942506</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="CHANGE: refactoring app">
+      <created>1571924708241</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1571924708241</updated>
+    </task>
+    <task id="LOCAL-00015" summary="CHANGE: refactoring app&#10;CHANGE: some css">
+      <created>1571925560182</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1571925560182</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99250000" />
+    <option name="totallyTimeSpent" value="107641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="5" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.66305524" visible="true" weight="0.18230277" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.66305524" visible="true" weight="0.13166311" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.33694476" side_tool="true" weight="0.18230277" />
@@ -900,23 +461,11 @@
     <MESSAGE value="CHANGE: decode token" />
     <MESSAGE value="ADD: provider name to payload to generate correctly the credential presentation qr." />
     <MESSAGE value="ADD: Some changes in the View.&#10;CHANGE: Traducción de la App en inglés." />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD: Some changes in the View.&#10;CHANGE: Traducción de la App en inglés." />
+    <MESSAGE value="CHANGE: refactoring app" />
+    <MESSAGE value="CHANGE: refactoring app&#10;CHANGE: some css" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHANGE: refactoring app&#10;CHANGE: some css" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon@2x.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/AppIcon-iOS/icon_20pt.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/AppIcon-iOS/icon_20pt@2x.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/icon/icon-40@2x.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default-667h.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default@2x~iphone.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/ios/splash/Default~iphone.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-hdpi-icon.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-ldpi-icon.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/android/icon/drawable-xxxhdpi-icon.png" />
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/icon.png" />
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/splash.png" />
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/icon.png.md5" />
@@ -924,9 +473,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/www/assets/icon/ic_launcher_APP.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/www/assets/icon/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1008,42 +554,9 @@
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/platforms/android/app/src/main/assets/www/assets/icon/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/contructions/contructions.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-346">
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/detail-profile/detail-profile.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/home/home.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/contructions/contructions.ts" />
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/detail-profile/detail-profile.ts" />
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/home/home.ts" />
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/assets/icon/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1054,90 +567,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/components/identity-data-list/identity-data-list.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1539">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/components/expandable-list/expandable-list.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/components/parallax/parallax-layout-1.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/user-info-header.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/activities/activities.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/components/identity-data-list/identity-data-list.ts" />
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/components/expandable-list/expandable-list.ts" />
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/components/parallax/parallax-layout-1.ts" />
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/components/user-info-header/user-info-header.ts" />
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/activities/activities.service.ts" />
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/node_modules/typescript/lib/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1145,23 +579,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/token-service.ts">
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/token-service.ts" />
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/loading-service.ts" />
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/loading-service.ts">
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        <state relative-caret-position="170">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <element signature="e#0#74#0" expanded="true" />
+            <element signature="e#0#65#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/www/assets/icon/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/modal-service-provider/modal-service-provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="140" column="93" selection-start-line="140" selection-start-column="93" selection-end-line="140" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
         </state>
       </provider>
     </entry>

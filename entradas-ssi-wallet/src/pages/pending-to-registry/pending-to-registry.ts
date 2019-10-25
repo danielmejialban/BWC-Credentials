@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-import {TestService} from "../../services/verifiable-credential.service";
 
 /**
  * Generated class for the PendingToRegistryPage page.
@@ -19,8 +18,7 @@ export class PendingToRegistryPage {
     _tickets = [];
     serviceProvider: any;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams,
-                private testService : TestService) {
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
         this.serviceProvider = JSON.parse(localStorage.getItem('provider'));
         console.log("obj", this.serviceProvider.provider);
   }

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, List, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Login} from "../login/login";
 
 /**
@@ -21,12 +21,13 @@ export class QrResponsePage {
     name: string;
     email: string;
     ticketsId = [];
+    _isMultiScanner: boolean;
+    login: Login;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this._isMultiScanner =  this.navParams.get('multiScanner');
+      console.log("IsMultiScannerValue---->",this._isMultiScanner);
       this.saveParamsInLocalStorage();
-  }
-
-  ionViewDidLoad() {
   }
 
   saveParamsInLocalStorage(){
@@ -35,13 +36,14 @@ export class QrResponsePage {
       this.email = this.navParams.get('email');
       this.ticketsId.push(this.ticket);
       localStorage.setItem("TicketsID",JSON.stringify(this.ticketsId));
-
   }
 
     goScanner(){
-        this.navCtrl.popTo(Login);
+      if (this._isMultiScanner){
+          console.log("---->",this._isMultiScanner);
+          this.login.qrScannerCam();
+      }else{
+          this.navCtrl.popTo(Login);
+      }
     }
-
-
-
 }

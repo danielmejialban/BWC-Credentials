@@ -6,9 +6,6 @@ import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
 import {Base64} from 'js-base64';
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
-import { TokenSigner } from 'jsontokens'
-import { decodeToken } from 'jsontokens'
-
 
 @IonicPage()
 @Component({
@@ -33,6 +30,7 @@ export class Login {
     test = this.genKey();
     token: any;
     backendId:string='did_back_end';
+    _isMultiScanner:boolean;
 
     constructor(
         public barcodeScanner: BarcodeScanner,
@@ -138,10 +136,9 @@ export class Login {
                     console.log("error",e);
                 }
                 if(this.decode64 != null && this.decode64 != undefined){
-                    console.log("multiScannerValue",this.multiScanner);
-                    this.navCtrl.push(QrResponsePage, {multiScanner: this.multiScanner});
+                    this.navCtrl.push(QrResponsePage, {multiScanner: this._isMultiScanner});
                 }else{
-                    this.navCtrl.push(QrResponseFailPage, {ticketId: this.decode64});
+                    this.navCtrl.push(QrResponseFailPage, {multiScanner: this._isMultiScanner});
                 }
             } else {
                 alert('Error: Contacte con el service provider.')
@@ -165,7 +162,8 @@ export class Login {
     }
 
     multiScanner(event:any){
-        console.log("Toggle Estado --->",event.activated);
+        this._isMultiScanner = event;
+        console.log("Event antes de enviarse",event);
     }
 }
 
