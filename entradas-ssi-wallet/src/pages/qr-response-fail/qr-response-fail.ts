@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Login} from "../login/login";
-
+import { Events } from 'ionic-angular';
 /**
  * Generated class for the QrResponseFailPage page.
  *
@@ -21,7 +21,8 @@ export class QrResponseFailPage {
     _isMultiScanner: boolean;
     login: Login;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams) {
       this._isMultiScanner =  this.navParams.get('multiScanner');
       console.log("IsMultiScannerValue---->",this._isMultiScanner);
   }
@@ -31,13 +32,16 @@ export class QrResponseFailPage {
       this.ticket = this.navParams.get('ticketId');
       this.name = this.navParams.get('name');
       this.email = this.navParams.get('email');
+
   }
 
   goScanner(){
       if (this._isMultiScanner){
+          console.log("---->",this._isMultiScanner);
+          console.log("isLogin --->",this.login);
           this.login.qrScannerCam();
       }else {
-          this.navCtrl.popTo(Login);
+          this.navCtrl.setRoot(Login);
       }
   }
 

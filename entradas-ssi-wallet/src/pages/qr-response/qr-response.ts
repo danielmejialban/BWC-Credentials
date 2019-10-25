@@ -43,7 +43,7 @@ export class QrResponsePage {
           console.log("---->",this._isMultiScanner);
           this.login.qrScannerCam();
       }else{
-          this.navCtrl.popTo(Login);
+          this.navCtrl.setRoot(Login);
       }
     }
 }

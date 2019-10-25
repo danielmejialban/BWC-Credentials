@@ -25,11 +25,11 @@ export class TestService{
         })
     }
 
-    // getKid(kid:string){
-    //     return this._http.post(`${this.development}`+"/v1/credential/didinplace",{"did":kid}).subscribe( data =>{
-    //       console.log(data);
-    //     })
-    // }
+    getKid(kid:string){
+        return this._http.post(`${this.development}`+"/v1/credential/didinplace",{"did":kid}).subscribe( data =>{
+          console.log(data);
+        })
+    }
 
     postValidateDid(id, did) {
         return  this._http.post("https://blockcha.in2.es/api/v1/credential/did", {

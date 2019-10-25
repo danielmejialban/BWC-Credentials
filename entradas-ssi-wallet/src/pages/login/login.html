@@ -7,7 +7,9 @@
                 <ngx-qrcode [qrc-value]="token"
                             qrc-class="aclass"
                             qrc-errorCorrectionLevel="L"
-                            [qrc-version]="23">
+                            [qrc-version]="23"
+                            (click)="openModalToServiceProvider()"
+                >
                 </ngx-qrcode>
             </div>
             <hr style="color:#a19dae">

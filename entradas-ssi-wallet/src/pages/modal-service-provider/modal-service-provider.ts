@@ -31,7 +31,7 @@ export class ModalServiceProviderPage {
       //     console.log(reason);
       // });
       localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
-      this.navCtrl.push(Login);
+      this.navCtrl.setRoot(Login);
     }
 
     btnCloseModal(){

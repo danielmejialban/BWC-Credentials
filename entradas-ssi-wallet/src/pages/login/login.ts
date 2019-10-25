@@ -1,11 +1,13 @@
-import { Component, Input } from '@angular/core';
-import { IonicPage, ModalController, ViewController, NavParams, NavController } from 'ionic-angular';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import {TestService} from "../../services/verifiable-credential.service";
-import {QrResponsePage} from "../qr-response/qr-response";
-import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
+import {Component, Input} from '@angular/core';
+import {IonicPage, ModalController, NavController, NavParams, ViewController} from 'ionic-angular';
+import {BarcodeScanner} from '@ionic-native/barcode-scanner';
 import {Base64} from 'js-base64';
 import {ModalServiceProviderPage} from "../modal-service-provider/modal-service-provider";
+import {QrResponsePage} from "../qr-response/qr-response";
+import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
+import {TestService} from "../../services/verifiable-credential.service";
+import { Events } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -36,8 +38,9 @@ export class Login {
         public barcodeScanner: BarcodeScanner,
         public navCtrl: NavController,
         public modalCtrl: ModalController,
-        private testService: TestService,
-        private barcode: BarcodeScanner,) {
+        public testService: TestService,
+        private barcode: BarcodeScanner,
+        public event: Events){
 
         let url = "https://www.in2.es/blockchain2/";
         let hashCode = "be77731ad14a77dd71ddee69c4350f3b";
