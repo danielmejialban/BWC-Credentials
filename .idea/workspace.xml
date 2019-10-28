@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a94a106-88b9-4e85-b3d5-d310d34899c8" name="Default Changelist" comment="">
+    <list default="true" id="3a94a106-88b9-4e85-b3d5-d310d34899c8" name="Default Changelist" comment="CHANGE: widtget id">
+      <change afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/services/qr-reader.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,38 +19,36 @@
     <favorites_list name="BWC-Credentials" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48557398">
+    <splitter split-orientation="horizontal" split-proportion="0.47228146">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2261">
-                  <caret line="140" column="93" selection-start-line="140" selection-start-column="93" selection-end-line="140" selection-end-column="93" />
-                  <folding>
-                    <element signature="e#0#49#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#0#40#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="323">
+                  <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="382">
+                  <caret line="140" column="72" lean-forward="true" selection-start-line="140" selection-start-column="72" selection-end-line="140" selection-end-column="72" />
+                  <folding>
+                    <element signature="e#0#47#0" expanded="true" />
+                    <element signature="n#!!block;n#genKey#0;n#Login#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/config.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+                <state relative-caret-position="204">
+                  <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -67,8 +60,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="731">
-                  <caret line="43" selection-start-line="43" selection-end-line="43" />
+                <state relative-caret-position="323">
+                  <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -76,10 +69,34 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="637">
-                  <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+                <state relative-caret-position="561">
+                  <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="586">
+                  <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="18" column="96" lean-forward="true" selection-start-line="18" selection-start-column="96" selection-end-line="18" selection-end-column="96" />
+                  <folding>
+                    <element signature="e#0#56#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -88,6 +105,13 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -101,6 +125,8 @@
       <find>favicon.ico</find>
       <find>&quot;assets/icon/favicon.ico&quot;</find>
       <find>loading-service.ts</find>
+      <find>cordova</find>
+      <find>ioni</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,33 +159,33 @@
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/components/identity-data-list/identity-data-list.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.module.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/services/loading-service.ts" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/modal-service-provider/modal-service-provider.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.scss" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.scss" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/config.xml" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/modal-service-provider/modal-service-provider.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/services/qr-reader.service.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts" />
-        <option value="$PROJECT_DIR$/entradas-ssi-wallet/config.xml" />
         <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts" />
+        <option value="$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1847" />
-    <option name="y" value="140" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
+    <option name="x" value="-1928" />
+    <option name="y" value="5" />
+    <option name="width" value="1095" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,23 +198,11 @@
               <item name="BWC-Credentials" type="462c0819:PsiDirectoryNode" />
               <item name="entradas-ssi-wallet" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="BWC-Credentials" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BWC-Credentials" type="462c0819:PsiDirectoryNode" />
-              <item name="entradas-ssi-wallet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BWC-Credentials" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BWC-Credentials" type="462c0819:PsiDirectoryNode" />
-              <item name="entradas-ssi-wallet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -260,7 +274,16 @@
       <workItem from="1571898824868" duration="8747000" />
       <workItem from="1571921583299" duration="8749000" />
       <workItem from="1571950174814" duration="594000" />
-      <workItem from="1571985303842" duration="2125000" />
+      <workItem from="1571985303842" duration="2372000" />
+      <workItem from="1571991009192" duration="8878000" />
+      <workItem from="1572003133264" duration="2164000" />
+      <workItem from="1572005428987" duration="3552000" />
+      <workItem from="1572010719963" duration="197000" />
+      <workItem from="1572247874566" duration="39000" />
+      <workItem from="1572249092192" duration="679000" />
+      <workItem from="1572250955593" duration="92000" />
+      <workItem from="1572252734624" duration="647000" />
+      <workItem from="1572259059444" duration="977000" />
     </task>
     <task id="LOCAL-00001" summary="CHANGE: QR reader.">
       <created>1571311984668</created>
@@ -367,17 +390,31 @@
       <option name="project" value="LOCAL" />
       <updated>1571925560182</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="CHANGE: widtget id">
+      <created>1571987498585</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1571987498585</updated>
+    </task>
+    <task id="LOCAL-00017" summary="CHANGE: Name service provider">
+      <created>1572006148528</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572006148528</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107641000" />
+    <option name="totallyTimeSpent" value="125113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="5" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.66305524" visible="true" weight="0.13166311" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.66305524" weight="0.15351813" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.33694476" side_tool="true" weight="0.18230277" />
@@ -391,7 +428,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.72264355" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.38136512" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.42036837" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -463,12 +500,11 @@
     <MESSAGE value="ADD: Some changes in the View.&#10;CHANGE: Traducción de la App en inglés." />
     <MESSAGE value="CHANGE: refactoring app" />
     <MESSAGE value="CHANGE: refactoring app&#10;CHANGE: some css" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHANGE: refactoring app&#10;CHANGE: some css" />
+    <MESSAGE value="CHANGE: widtget id" />
+    <MESSAGE value="CHANGE: Name service provider" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHANGE: Name service provider" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/icon.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/splash.png" />
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/icon.png.md5" />
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/resources/android/splash/xxhdpi/ic_launcher_APP.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -501,9 +537,7 @@
     <entry file="file://$PROJECT_DIR$/assets/arquitectura1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/platforms/browser/www/assets/icon/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/platforms/browser/www/assets/icon/favicon.ico" />
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -524,13 +558,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/www/index.html" />
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/platforms/android/app/build/intermediates/merged_assets/release/mergeReleaseAssets/out/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -588,16 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -631,26 +649,6 @@
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/www/assets/icon/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/modal-service-provider/modal-service-provider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/pending-to-registry/pending-to-registry.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -675,27 +673,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts">
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="140" column="93" selection-start-line="140" selection-start-column="93" selection-end-line="140" selection-end-column="93" />
+        <state relative-caret-position="-2652" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/qr-reader.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding>
-            <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="323">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/services/verifiable-credential.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="96" lean-forward="true" selection-start-line="18" selection-start-column="96" selection-end-line="18" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response-fail/qr-response-fail.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="586">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/modal-service-provider/modal-service-provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -704,18 +751,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/qr-response/qr-response.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        <state relative-caret-position="561">
+          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/config.xml">
+    <entry file="file://$PROJECT_DIR$/entradas-ssi-wallet/src/pages/login/login.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        <state relative-caret-position="382">
+          <caret line="140" column="72" lean-forward="true" selection-start-line="140" selection-start-column="72" selection-end-line="140" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+            <element signature="n#!!block;n#genKey#0;n#Login#0" />
+          </folding>
         </state>
       </provider>
     </entry>
