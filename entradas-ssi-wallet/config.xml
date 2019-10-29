@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="es.in2.blockchain.service_provider" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>BlockchaIN2-QReader</name>
-    <description>An awesome Ionic/Cordova app.</description>
+    <name>Convergence Credential Verifier</name>
+    <description>Credentiall reader for Convergence Wallet by IN2 app, designed for service providers in Alastria ID protocol context. This APP allows to read and verify SSI credentials stored in Convergence Wallet by IN2.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />

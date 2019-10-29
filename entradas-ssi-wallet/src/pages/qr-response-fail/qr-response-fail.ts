@@ -1,7 +1,9 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Login} from "../login/login";
-import { Events } from 'ionic-angular';
+import {QrResponsePage} from "../qr-response/qr-response";
+import {BarcodeScanner} from "@ionic-native/barcode-scanner";
+import {TestService} from "../../services/verifiable-credential.service";
 /**
  * Generated class for the QrResponseFailPage page.
  *
@@ -19,10 +21,13 @@ export class QrResponseFailPage {
     name: string;
     email: string;
     _isMultiScanner: boolean;
-    login: Login;
+    decode64: string;
+    backendId:string='did_back_end';
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              private barcode: BarcodeScanner,
+              public testService: TestService) {
       this._isMultiScanner =  this.navParams.get('multiScanner');
       console.log("IsMultiScannerValue---->",this._isMultiScanner);
   }
@@ -32,17 +37,63 @@ export class QrResponseFailPage {
       this.ticket = this.navParams.get('ticketId');
       this.name = this.navParams.get('name');
       this.email = this.navParams.get('email');
-
   }
 
-  goScanner(){
+  goBack(){
       if (this._isMultiScanner){
-          console.log("---->",this._isMultiScanner);
-          console.log("isLogin --->",this.login);
-          this.login.qrScannerCam();
+          this.qrScannerCam();
       }else {
           this.navCtrl.setRoot(Login);
       }
   }
+
+
+    qrScannerCam(){
+        this.barcode.scan().then(barcodeData => {
+            let jwt = require("jsontokens");
+            let token = undefined;
+            this.decode64 = undefined;
+            if (barcodeData != null || barcodeData != undefined) {
+                try {
+                    token  = jwt.decodeToken(barcodeData.text);
+                    this.getDid(token);
+                    this.searchJSON(token);
+                }catch (e) {
+                    console.log("error",e);
+                }
+                if(this.decode64 != null && this.decode64 != undefined){
+                        this.navCtrl.push(QrResponsePage, {multiScanner: this._isMultiScanner});
+                        this.navCtrl.remove(1,);
+                }else{
+                    this.navCtrl.push(QrResponseFailPage, {multiScanner: this._isMultiScanner});
+                    this.navCtrl.remove(1);
+                }
+            } else {
+                alert('Error: Contacte con el service provider.')
+            }
+        }).catch(err => {
+            console.log('Error', err);
+        });
+    }
+
+    getDid(token:any){
+        let _kid = this.testService.postValidateDid(this.backendId,token).subscribe( (data:any) =>{
+        }).unsubscribe();
+        return _kid;
+    }
+
+
+    searchJSON(data: any) {
+        for (let k in data) {
+            if (typeof data[k] == "object" && data[k] !== null) {
+                if (k == 'verifiableCredential') {
+                    this.decode64 = data[k];
+                }
+                else{
+                    this.searchJSON(data[k]);
+                }
+            }
+        }
+    }
 
 }
