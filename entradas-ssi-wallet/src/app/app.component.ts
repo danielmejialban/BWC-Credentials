@@ -32,6 +32,11 @@ export class MyApp {
         }
     }
 
+
+    openUrl(url:string){
+        window.open(url,'_system','location=yes');
+    }
+
     exitApp(){
         console.log("cerrando App...");
         this.platform.exitApp();
