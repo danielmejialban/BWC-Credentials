@@ -17,6 +17,7 @@ import {TestService} from "../services/verifiable-credential.service";
 import {QrResponsePage} from "../pages/qr-response/qr-response";
 import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
 import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-service-provider";
+import {MODE_MD} from "ionic-angular/config/mode-registry";
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-se
     ],
     imports: [
         BrowserModule,
-        IonicModule.forRoot(MyApp),
+        IonicModule.forRoot(MyApp, {mode:'md'}),
         NgxQRCodeModule,
         HttpClientModule
     ],
