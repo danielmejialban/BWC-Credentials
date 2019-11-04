@@ -17,6 +17,7 @@ import {Login} from "../login/login";
 export class ModalServiceProviderPage {
 
     serviceProvider: string;
+    _provider: string;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -24,7 +25,7 @@ export class ModalServiceProviderPage {
   }
 
   ionViewDidLoad() {
-
+        this._provider = JSON.parse(localStorage.getItem('provider'));
   }
 
   closeModal(){
@@ -33,6 +34,6 @@ export class ModalServiceProviderPage {
     }
 
     btnCloseModal(){
-        this.navCtrl.push(Login);
+       this.navCtrl.pop();
     }
 }
