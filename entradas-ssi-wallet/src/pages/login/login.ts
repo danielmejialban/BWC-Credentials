@@ -130,6 +130,10 @@ export class Login {
             let jwt = require("jsontokens");
             let token = undefined;
             this.decode64 = undefined;
+
+            if (barcodeData.cancelled){
+                this.navCtrl.popTo(Login);
+            }
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
@@ -146,8 +150,10 @@ export class Login {
             } else {
                 alert('Error: Contacte con el service provider.')
             }
+
+            
         }).catch(err => {
-            console.log('Error', err);
+            console.log(err);
         });
     }
 
