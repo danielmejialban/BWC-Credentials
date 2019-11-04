@@ -8,14 +8,26 @@ import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-se
 @Component({
     templateUrl: 'app.html'
 })
-export class MyApp {
-    rootPage: any = ModalServiceProviderPage;
+export class MyApp{
+    _firstAccess;
+    rootPage: any;
     @ViewChild(Nav) nav: Nav;
     platform: any;
 
     constructor(platform: Platform) {
         console.log("[Debug] App enter");
+        this._firstAccess = localStorage.getItem('provider');
+        console.log("firstAccess", this._firstAccess);
+        if (this._firstAccess !== null){
+            this.rootPage = Login;
+        }else{
+            this.rootPage = ModalServiceProviderPage;
+        }
         this.platform = platform;
+    }
+
+
+    ionViewDidLoad() {
     }
 
     openPage(page: string){

@@ -18,18 +18,16 @@ export class ModalServiceProviderPage {
 
     serviceProvider: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ModalServiceProviderPage');
+
   }
 
   closeModal(){
-      // this.viewCtrl.dismiss({ provider: this.serviceProvider}).catch(reason => {
-      //     alert("Lo sentimos ha ocurrido un error");
-      //     console.log(reason);
-      // });
       localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
       this.navCtrl.setRoot(Login);
     }

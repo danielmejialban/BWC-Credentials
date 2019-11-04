@@ -16,10 +16,10 @@
     <preference name="orientation" value="portrait" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon density="mdpi" src="resources/android/splash/mdpi/ic_launcher_APP.png" />
-        <icon density="hdpi" src="resources/android/splash/hdpi/ic_launcher_APP.png" />
-        <icon density="xhdpi" src="resources/android/splash/xhdpi/ic_launcher_APP.png" />
-        <icon density="xxhdpi" src="resources/android/splash/xxhdpi/ic_launcher_APP.png" />
+        <icon density="mdpi" src="resources/android/splash/mdpi/ccv-logo_editat 512x512.jpg" />
+        <icon density="hdpi" src="resources/android/splash/mdpi/ccv-logo_editat 512x512.jpg" />
+        <icon density="xhdpi" src="resources/android/splash/mdpi/ccv-logo_editat 512x512.jpg" />
+        <icon density="xxhdpi" src="resources/android/splash/mdpi/ccv-logo_editat 512x512.jpg" />
         <splash density="port-hdpi" src="resources/android/splash/mdpi/1 Splash.png" />
         <splash density="port-mdpi" src="resources/android/splash/xhdpi/1 Splash.png" />
     </platform>
