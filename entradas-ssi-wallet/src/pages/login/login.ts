@@ -99,12 +99,6 @@ export class Login {
     }
 
     generateToken(keys:any) {
-        // let token = jwt.sign(this.jwtPayload, "-----BEGIN EC PRIVATE KEY-----\n" +
-        //     "MHQCAQEEILI8IeZxN1DQskSvfl1rDnWp/9horl1xAwumWlk0fYejoAcGBSuBBAAK\n" +
-        //     "oUQDQgAENF5lijsAeVDle1NLoOqt3w0yZ/4VAVBpO3rr6HCOCSDHD+DxirmR0BKW\n" +
-        //     "YCoGtSiFSUeekSLkIeohUoxoMUTAng==\n" +
-        //     "-----END EC PRIVATE KEY-----", {header: this.headerJwt, algorithm: "ES256"});
-        // localStorage.setItem('token',JSON.stringify(token));
         let tokenSigned = new this.jsontokens.TokenSigner('ES256k', keys.private).sign(this.jwtPayload,false,this.headerJwt);
         return tokenSigned;
     }
@@ -150,8 +144,6 @@ export class Login {
             } else {
                 alert('Error: Contacte con el service provider.')
             }
-
-            
         }).catch(err => {
             console.log(err);
         });
