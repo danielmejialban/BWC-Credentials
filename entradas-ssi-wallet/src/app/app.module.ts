@@ -18,7 +18,6 @@ import {QrResponsePage} from "../pages/qr-response/qr-response";
 import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
 import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-service-provider";
 import {MODE_MD} from "ionic-angular/config/mode-registry";
-import {ImpersonateInterceptor} from "../services/impersonate.interceptor";
 
 
 @NgModule({
@@ -60,11 +59,11 @@ import {ImpersonateInterceptor} from "../services/impersonate.interceptor";
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         QRScanner,
         TestService,
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: ImpersonateInterceptor,
-            multi: true,
-        }
+        // {
+        //     provide: HTTP_INTERCEPTORS,
+        //     useClass: ImpersonateInterceptor,
+        //     multi: true,
+        // }
         // QrReaderService
     ]
 })
