@@ -1,5 +1,8 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController} from 'ionic-angular';
+import {Storage} from "@ionic/storage";
+import { ModalController } from 'ionic-angular';
+import {ModalTransactionPage} from "../modal-transaction/modal-transaction";
 
 /**
  * Generated class for the PendingToRegistryPage page.
@@ -15,18 +18,38 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class PendingToRegistryPage {
 
-    _tickets = [];
+    transtactions = [];
+    showTransactions = false;
     serviceProvider: any;
+    dateplustime:any;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public navCtrl: NavController,
+                private storage:Storage,
+                public modalCtrl: ModalController) {
         this.serviceProvider = JSON.parse(localStorage.getItem('provider'));
         console.log("obj", this.serviceProvider.provider);
-  }
+    }
 
     ionViewDidLoad() {
         console.log('ionViewDidLoad PendingToRegistryPage');
-        let tickets = localStorage.getItem('TicketsID');
-        this._tickets.push(tickets);
-        console.log("tickets lenght",this._tickets.length);
+        let today = new Date();
+        let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        this.dateplustime = time.toString() + '·' + date.toString();
+        console.log("fecha---->",this.dateplustime);
+
+        this.storage.get('transaction').then( (value) => {
+            console.log("Value--->",value);
+            this.transtactions = value;
+            console.log(this.transtactions);
+        });
+        this.storage.keys().then( value => {
+            console.log("Keys",value);
+        })
+    }
+
+    openTransaction(hash){
+        let modalTransaction = this.modalCtrl.create(ModalTransactionPage, {hash});
+        modalTransaction.present();
     }
 }

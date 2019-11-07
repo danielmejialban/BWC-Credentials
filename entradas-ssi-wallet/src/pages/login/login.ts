@@ -7,6 +7,9 @@ import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
 import {TestService} from "../../services/verifiable-credential.service";
 import { Events } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import {TransactionResponse} from "../../services/transactionResponse";
+import {type} from "os";
 
 @IonicPage()
 @Component({
@@ -35,6 +38,8 @@ export class Login {
     _isMultiScanner:boolean;
     hash:any;
     did:any;
+    simpleTransaction: TransactionResponse;
+    transactions: TransactionResponse[] = [];
 
     constructor(
         public barcodeScanner: BarcodeScanner,
@@ -42,7 +47,8 @@ export class Login {
         public modalCtrl: ModalController,
         public testService: TestService,
         private barcode: BarcodeScanner,
-        public event: Events){
+        public event: Events,
+        private storage: Storage){
 
         let url = "https://www.in2.es/blockchain2/";
         let hashCode = "be77731ad14a77dd71ddee69c4350f3b";
@@ -84,6 +90,7 @@ export class Login {
         this.token = this.generateToken(keys);
         console.log(this.token);
     }
+
 
      genKey(){
         let keypair = this.ecurve.genKeyPair();
@@ -144,8 +151,30 @@ export class Login {
                 if(this.decode64 != null && this.decode64 != undefined){
                     this.navCtrl.push(QrResponsePage, {multiScanner: this._isMultiScanner});
                     this.hash = this.pmHash(this.token.toString(),this.headerJwt.kid);
-                    this.testService.registerCredential(this.hash).subscribe( data =>{
+                    this.testService.registerCredential(this.hash).subscribe( (data:TransactionResponse)=>{
                         console.log("Data",data);
+                         this.simpleTransaction = data;
+                         this.transactions.push(this.simpleTransaction);
+                         this.storage.get('transaction').then(
+                             (res) => {
+                                 let today = new Date();
+                                 let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+                                 let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                                 let actualTime = time.toString() + '·' + date.toString();
+                                 data.time = actualTime;
+                                 if (res != null) {
+                                     let resData:any;
+                                     resData = res;
+                                     resData.push(data);
+
+                                     this.storage.set('transaction', resData);
+                                 } else {
+                                     this.storage.set('transaction', [data]);
+                                 }
+                             },
+                             (err) => {},
+                         )
+
                     });
                 }else{
                     this.navCtrl.push(QrResponseFailPage, {multiScanner: this._isMultiScanner});

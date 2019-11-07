@@ -64,11 +64,11 @@ export class QrResponseFailPage {
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
-                    let did = this.getDid(token);
+                    this.getDid(token);
                     this.searchJSON(token);
-                    this.hash = this.pmHash(token,did);
-                    console.log("---HASH2---",this.hash);
-                    this.testService.registerCredential(this.hash);
+                    // this.hash = this.pmHash(token,did);
+                    // console.log("---HASH2---",this.hash);
+                    // this.testService.registerCredential(this.hash);
                 }catch (e) {
                     console.log("error",e);
                 }

@@ -1,0 +1,25 @@
+<!--
+  Generated template for the ModalTransactionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="transparent">
+    <div class="modal_content" style="margin-top: 100px;">
+        <div class="div-btn-close">
+            <button ion-button color="red" class="btn-exit" [clear]="true" (click)="closeModal()">
+                <img src="assets/images/hdpi/ico-close-red.png">
+            </button>
+        </div>
+        <div class="content-provider">
+            <h6>Nº Transaction</h6>
+            <span>
+                {{hash}}
+            </span>
+            <br />
+            <button ion-button color="success" class="btn-save"  style="margin-top:10px;" (click)="closeModal()">
+                OK
+            </button>
+        </div>
+    </div>
+</ion-content>

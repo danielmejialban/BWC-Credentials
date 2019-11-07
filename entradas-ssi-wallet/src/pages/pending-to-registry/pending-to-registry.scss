@@ -19,6 +19,7 @@ page-pending-to-registry {
         margin-top: 15px;
         margin-left: 18px;
         margin-right: 18px;
+        align-items: center;
     }
 
     .level{
@@ -52,5 +53,11 @@ page-pending-to-registry {
         font-size: 15px;
         color: #aab3b3 !important;
         font-weight: bold;
+    }
+
+    .backgroundImg{
+        background-image: url("../assets/images/hdpi/cards_background.jpg");
+        //height: 170px;
+        //max-width: 100%;
     }
 }

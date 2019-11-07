@@ -9,6 +9,7 @@ import {NgxQRCodeModule} from "ngx-qrcode2";
     imports: [
         IonicPageModule.forChild(Login),
         NgxQRCodeModule,
+
     ],
     exports: [
     ],
