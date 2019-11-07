@@ -9,7 +9,7 @@ import {BarcodeScanner} from '@ionic-native/barcode-scanner';
 import {NgxQRCodeModule} from 'ngx-qrcode2';
 import {SecureStorage} from '@ionic-native/secure-storage';
 import {FingerprintAIO} from '@ionic-native/fingerprint-aio';
-import {HttpClientModule} from "@angular/common/http"
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http"
 import {SideBarComponent} from "../components/side-bar/side-bar";
 import {QRScanner} from "@ionic-native/qr-scanner/ngx";
 import {PendingToRegistryPage} from "../pages/pending-to-registry/pending-to-registry";
@@ -17,8 +17,8 @@ import {TestService} from "../services/verifiable-credential.service";
 import {QrResponsePage} from "../pages/qr-response/qr-response";
 import {QrResponseFailPage} from "../pages/qr-response-fail/qr-response-fail";
 import {ModalServiceProviderPage} from "../pages/modal-service-provider/modal-service-provider";
-import {MODE_MD} from "ionic-angular/config/mode-registry";
-
+import { IonicStorageModule } from '@ionic/storage';
+import {ModalTransactionPage} from "../pages/modal-transaction/modal-transaction";
 
 @NgModule({
     declarations: [
@@ -29,13 +29,15 @@ import {MODE_MD} from "ionic-angular/config/mode-registry";
         PendingToRegistryPage,
         QrResponsePage,
         QrResponseFailPage,
-        ModalServiceProviderPage
+        ModalServiceProviderPage,
+        ModalTransactionPage
     ],
     imports: [
         BrowserModule,
         IonicModule.forRoot(MyApp, {mode:'md'}),
         NgxQRCodeModule,
-        HttpClientModule
+        HttpClientModule,
+        IonicStorageModule.forRoot()
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -45,7 +47,9 @@ import {MODE_MD} from "ionic-angular/config/mode-registry";
         PendingToRegistryPage,
         QrResponsePage,
         QrResponseFailPage,
-        ModalServiceProviderPage
+        ModalServiceProviderPage,
+        ModalTransactionPage
+
     ],
     exports: [
         SideBarComponent
@@ -59,6 +63,11 @@ import {MODE_MD} from "ionic-angular/config/mode-registry";
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         QRScanner,
         TestService,
+        // {
+        //     provide: HTTP_INTERCEPTORS,
+        //     useClass: ImpersonateInterceptor,
+        //     multi: true,
+        // }
         // QrReaderService
     ]
 })

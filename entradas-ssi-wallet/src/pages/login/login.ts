@@ -7,7 +7,9 @@ import {QrResponsePage} from "../qr-response/qr-response";
 import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
 import {TestService} from "../../services/verifiable-credential.service";
 import { Events } from 'ionic-angular';
-
+import { Storage } from '@ionic/storage';
+import {TransactionResponse} from "../../services/transactionResponse";
+import {type} from "os";
 
 @IonicPage()
 @Component({
@@ -28,11 +30,16 @@ export class Login {
     expDate: Date = new Date();
     elliptic = require('elliptic');
     jsontokens = require('jsontokens');
+    web3 = require('web3');
     ecurve = new this.elliptic.ec('secp256k1');
     test = this.genKey();
     token: any;
     backendId:string='did_back_end';
     _isMultiScanner:boolean;
+    hash:any;
+    did:any;
+    simpleTransaction: TransactionResponse;
+    transactions: TransactionResponse[] = [];
 
     constructor(
         public barcodeScanner: BarcodeScanner,
@@ -40,7 +47,8 @@ export class Login {
         public modalCtrl: ModalController,
         public testService: TestService,
         private barcode: BarcodeScanner,
-        public event: Events){
+        public event: Events,
+        private storage: Storage){
 
         let url = "https://www.in2.es/blockchain2/";
         let hashCode = "be77731ad14a77dd71ddee69c4350f3b";
@@ -83,6 +91,7 @@ export class Login {
         console.log(this.token);
     }
 
+
      genKey(){
         let keypair = this.ecurve.genKeyPair();
         let key = keypair.getPrivate().toString('hex');
@@ -94,7 +103,9 @@ export class Login {
 
     getDid(token:any){
       let _kid = this.testService.postValidateDid(this.backendId,token).subscribe( (data:any) =>{
-        }).unsubscribe();
+          console.log("GetDid",data);
+        });
+      console.log("Kid",_kid);
       return _kid;
     }
 
@@ -131,13 +142,40 @@ export class Login {
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
-                    this.getDid(token);
+                    console.log(token.toString());
+                    console.log("--",this.token.toString());
                     this.searchJSON(token);
                 }catch (e) {
                     console.log("error",e);
                 }
                 if(this.decode64 != null && this.decode64 != undefined){
                     this.navCtrl.push(QrResponsePage, {multiScanner: this._isMultiScanner});
+                    this.hash = this.pmHash(this.token.toString(),this.headerJwt.kid);
+                    this.testService.registerCredential(this.hash).subscribe( (data:TransactionResponse)=>{
+                        console.log("Data",data);
+                         this.simpleTransaction = data;
+                         this.transactions.push(this.simpleTransaction);
+                         this.storage.get('transaction').then(
+                             (res) => {
+                                 let today = new Date();
+                                 let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+                                 let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                                 let actualTime = time.toString() + '·' + date.toString();
+                                 data.time = actualTime;
+                                 if (res != null) {
+                                     let resData:any;
+                                     resData = res;
+                                     resData.push(data);
+
+                                     this.storage.set('transaction', resData);
+                                 } else {
+                                     this.storage.set('transaction', [data]);
+                                 }
+                             },
+                             (err) => {},
+                         )
+
+                    });
                 }else{
                     this.navCtrl.push(QrResponseFailPage, {multiScanner: this._isMultiScanner});
                 }
@@ -165,6 +203,15 @@ export class Login {
     multiScanner(event:any){
         this._isMultiScanner = event;
         console.log("Event antes de enviarse",event);
+    }
+
+    pmHash(jwt, did){
+        console.log("JWT",jwt);
+        console.log("DID",did);
+        let json = jwt.concat(did);
+        console.log("concat--",json);
+        console.log("--HASH----",this.web3.utils.sha3(json));
+        return this.web3.utils.sha3(json);
     }
 }
 

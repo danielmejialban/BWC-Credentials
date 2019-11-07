@@ -74,7 +74,8 @@
     "rxjs": "5.5.6",
     "sw-toolbox": "3.6.0",
     "truffle-contract": "3.0.6",
-    "zone.js": "0.8.18"
+    "zone.js": "0.8.18",
+    "web3": "1.2.1"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.3",

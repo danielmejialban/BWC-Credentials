@@ -34,6 +34,6 @@ export class ModalServiceProviderPage {
     }
 
     btnCloseModal(){
-       this.navCtrl.pop();
+        this.navCtrl.setRoot(Login);
     }
 }
