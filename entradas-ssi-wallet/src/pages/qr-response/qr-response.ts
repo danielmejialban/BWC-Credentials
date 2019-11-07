@@ -28,6 +28,7 @@ export class QrResponsePage {
     login: Login;
     decode64: string;
     backendId:string='did_back_end';
+    hash:any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -60,11 +61,18 @@ export class QrResponsePage {
             let jwt = require("jsontokens");
             let token = undefined;
             this.decode64 = undefined;
+
+            if (barcodeData.cancelled){
+                this.navCtrl.popTo(Login);
+            }
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
-                    this.getDid(token);
+                    let did =  this.getDid(token);
                     this.searchJSON(token);
+                    this.hash = this.pmHash(token,did);
+                    console.log("---HASH2---",this.hash);
+                    this.testService.registerCredential(this.hash);
                 }catch (e) {
                     console.log("error",e);
                 }
@@ -102,5 +110,12 @@ export class QrResponsePage {
                 }
             }
         }
+    }
+
+    pmHash(jwt, did){
+        let web3 = require('web3');
+        let json = jwt.concat(did);
+        console.log("--HASH----",web3.utils.sha3(json));
+        return web3.utils.sha3(json);
     }
 }

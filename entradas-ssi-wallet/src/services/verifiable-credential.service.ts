@@ -36,5 +36,11 @@ export class TestService{
             id: id,
             did: did
         })
+        console.log(id)
+        console.log(did)
+    }
+
+    registerCredential(hash:any){
+        return this._http.get("http://15.236.0.91:8080/4444/"+hash);
     }
 }

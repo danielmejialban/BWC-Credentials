@@ -8,7 +8,6 @@ import {QrResponseFailPage} from "../qr-response-fail/qr-response-fail";
 import {TestService} from "../../services/verifiable-credential.service";
 import { Events } from 'ionic-angular';
 
-
 @IonicPage()
 @Component({
     selector: 'login',
@@ -28,11 +27,14 @@ export class Login {
     expDate: Date = new Date();
     elliptic = require('elliptic');
     jsontokens = require('jsontokens');
+    web3 = require('web3');
     ecurve = new this.elliptic.ec('secp256k1');
     test = this.genKey();
     token: any;
     backendId:string='did_back_end';
     _isMultiScanner:boolean;
+    hash:any;
+    did:any;
 
     constructor(
         public barcodeScanner: BarcodeScanner,
@@ -94,7 +96,9 @@ export class Login {
 
     getDid(token:any){
       let _kid = this.testService.postValidateDid(this.backendId,token).subscribe( (data:any) =>{
-        }).unsubscribe();
+          console.log("GetDid",data);
+        });
+      console.log("Kid",_kid);
       return _kid;
     }
 
@@ -131,13 +135,18 @@ export class Login {
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
-                    this.getDid(token);
+                    console.log(token.toString());
+                    console.log("--",this.token.toString());
                     this.searchJSON(token);
                 }catch (e) {
                     console.log("error",e);
                 }
                 if(this.decode64 != null && this.decode64 != undefined){
                     this.navCtrl.push(QrResponsePage, {multiScanner: this._isMultiScanner});
+                    this.hash = this.pmHash(this.token.toString(),this.headerJwt.kid);
+                    this.testService.registerCredential(this.hash).subscribe( data =>{
+                        console.log("Data",data);
+                    });
                 }else{
                     this.navCtrl.push(QrResponseFailPage, {multiScanner: this._isMultiScanner});
                 }
@@ -165,6 +174,15 @@ export class Login {
     multiScanner(event:any){
         this._isMultiScanner = event;
         console.log("Event antes de enviarse",event);
+    }
+
+    pmHash(jwt, did){
+        console.log("JWT",jwt);
+        console.log("DID",did);
+        let json = jwt.concat(did);
+        console.log("concat--",json);
+        console.log("--HASH----",this.web3.utils.sha3(json));
+        return this.web3.utils.sha3(json);
     }
 }
 

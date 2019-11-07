@@ -23,6 +23,7 @@ export class QrResponseFailPage {
     _isMultiScanner: boolean;
     decode64: string;
     backendId:string='did_back_end';
+    hash:any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -43,6 +44,7 @@ export class QrResponseFailPage {
       if (this._isMultiScanner){
           this.qrScannerCam();
       }else {
+          this.navCtrl.popAll();
           this.navCtrl.setRoot(Login);
       }
   }
@@ -51,13 +53,22 @@ export class QrResponseFailPage {
     qrScannerCam(){
         this.barcode.scan().then(barcodeData => {
             let jwt = require("jsontokens");
+
+
             let token = undefined;
             this.decode64 = undefined;
+
+            if (barcodeData.cancelled){
+                this.navCtrl.popTo(Login);
+            }
             if (barcodeData != null || barcodeData != undefined) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
-                    this.getDid(token);
+                    let did = this.getDid(token);
                     this.searchJSON(token);
+                    this.hash = this.pmHash(token,did);
+                    console.log("---HASH2---",this.hash);
+                    this.testService.registerCredential(this.hash);
                 }catch (e) {
                     console.log("error",e);
                 }
@@ -94,6 +105,13 @@ export class QrResponseFailPage {
                 }
             }
         }
+    }
+
+    pmHash(jwt, did){
+        let web3 = require('web3');
+        let json = jwt.concat(did);
+        console.log("--HASH----",web3.utils.sha3(json));
+        return web3.utils.sha3(json);
     }
 
 }
