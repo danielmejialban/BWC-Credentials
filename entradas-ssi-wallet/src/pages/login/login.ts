@@ -50,7 +50,7 @@ export class Login {
         public event: Events,
         private storage: Storage){
 
-        let url = "https://www.in2.es/blockchain2/";
+        let url = "https://www.in2.es/en/convergence-request-privacy-policy/";
         let hashCode = "be77731ad14a77dd71ddee69c4350f3b";
         let keys = this.genKey();
         let publicB64 = Base64.encode(keys.public1);
