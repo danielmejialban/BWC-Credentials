@@ -44,8 +44,10 @@ export class QrResponseFailPage {
       if (this._isMultiScanner){
           this.qrScannerCam();
       }else {
-          this.navCtrl.popAll();
-          this.navCtrl.setRoot(Login);
+          // this.navCtrl.popAll();
+          this.navCtrl.setRoot(Login).then( value => {
+              console.log(value);
+          });
       }
   }
 
@@ -53,8 +55,6 @@ export class QrResponseFailPage {
     qrScannerCam(){
         this.barcode.scan().then(barcodeData => {
             let jwt = require("jsontokens");
-
-
             let token = undefined;
             this.decode64 = undefined;
 
@@ -74,7 +74,7 @@ export class QrResponseFailPage {
                 }
                 if(this.decode64 != null && this.decode64 != undefined){
                         this.navCtrl.push(QrResponsePage, {multiScanner: this._isMultiScanner});
-                        this.navCtrl.remove(1,);
+                        this.navCtrl.remove(1);
                 }else{
                     this.navCtrl.push(QrResponseFailPage, {multiScanner: this._isMultiScanner});
                     this.navCtrl.remove(1);
