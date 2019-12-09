@@ -57,5 +57,9 @@ export class MyApp{
     comingSoon(){
         alert("Coming Soon...");
     }
+
+    test(event){
+        console.warn(event);
+    }
 }
 

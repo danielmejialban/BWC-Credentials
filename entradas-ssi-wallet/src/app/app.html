@@ -1,6 +1,6 @@
 <ion-menu persistent="true" [content]="content" type="overlay" >
     <ion-header class="black_menu">
-        <button>
+        <button style="color:#1a1831;">
             <ion-icon name="menu" style="background: #1a1831;"></ion-icon>
         </button>
     </ion-header>
@@ -36,9 +36,9 @@
             <img  class="img-header-logos" src="assets/images/hdpi/Header-logos.png"/>
         </ion-title>
     </div>
-    <button class="btn-side-bar" #content ion-button menuToggle clear icon-start>
+    <button  class="btn-side-bar" #content ion-button menuToggle clear icon-start>
         <img clas="img-button-icon" src="assets/images/hdpi/Header-iconW.png"/>
     </button>
 </ion-navbar>
 
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-nav id="nav" [root]="rootPage"></ion-nav>

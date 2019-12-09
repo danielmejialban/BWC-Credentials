@@ -17,7 +17,6 @@ import {Login} from "../login/login";
 export class ModalServiceProviderPage {
 
     serviceProvider: string;
-    _provider: string;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -25,15 +24,15 @@ export class ModalServiceProviderPage {
   }
 
   ionViewDidLoad() {
-        this._provider = JSON.parse(localStorage.getItem('provider'));
+        this.serviceProvider = JSON.parse(localStorage.getItem('provider'));
   }
 
   closeModal(){
       localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
-      this.navCtrl.setRoot(Login);
-    }
-
-    btnCloseModal(){
-        this.navCtrl.setRoot(Login);
+      this.navCtrl.popTo(Login).then( result =>{
+          console.log('Ok', result)
+      }).catch(() =>{
+          this.navCtrl.push(Login);
+      })
     }
 }
