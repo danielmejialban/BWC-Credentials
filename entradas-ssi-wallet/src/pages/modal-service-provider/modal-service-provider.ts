@@ -27,7 +27,7 @@ export class ModalServiceProviderPage {
         this.serviceProvider = JSON.parse(localStorage.getItem('provider'));
   }
 
-  closeModal(){
+  closeModalSavingProvider(){
       localStorage.setItem('provider',JSON.stringify(this.serviceProvider));
       this.navCtrl.popTo(Login).then( result =>{
           console.log('Ok', result)
@@ -35,4 +35,12 @@ export class ModalServiceProviderPage {
           this.navCtrl.push(Login);
       })
     }
+
+    closeModal(){
+    this.navCtrl.pop();
+  }
 }
+
+
+
+
