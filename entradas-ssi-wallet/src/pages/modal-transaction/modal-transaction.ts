@@ -25,7 +25,6 @@ export class ModalTransactionPage {
     console.log('ionViewDidLoad ModalTransactionPage');
   }
 
-
   closeModal(){
       this.navCtrl.pop().then(value => {
           console.log(value);

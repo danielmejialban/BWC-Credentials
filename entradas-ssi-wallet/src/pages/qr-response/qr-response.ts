@@ -65,14 +65,11 @@ export class QrResponsePage {
             if (barcodeData.cancelled){
                 this.navCtrl.popTo(Login);
             }
-            if (barcodeData != null || barcodeData != undefined) {
+            if (barcodeData) {
                 try {
                     token  = jwt.decodeToken(barcodeData.text);
                     this.getDid(token);
                     this.searchJSON(token);
-                    // this.hash = this.pmHash(token,did);
-                    // console.log("---HASH2---",this.hash);
-                    // this.testService.registerCredential(this.hash);
                 }catch (e) {
                     console.log("error",e);
                 }
